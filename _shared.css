@@ -96,6 +96,13 @@ header {
     height: 72px;
 }
 
+.nav-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
 nav ul {
     list-style: none;
     display: flex;
