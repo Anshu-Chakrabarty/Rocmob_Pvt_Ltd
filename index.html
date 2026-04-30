@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home – Performance Marketing Agency, Kolkata — Rocmob Performance Limited</title>
+    <link rel="stylesheet" href="_shared.css">
+    <style>
+        /* Hero */
+        
+        .hero {
+            padding: 96px 0 80px;
+            background: linear-gradient(160deg, #f4f9fe 0%, #e8f3fb 50%, #ddeef8 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(27, 111, 190, 0.06) 1px, transparent 1px);
+            background-size: 36px 36px;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(27, 111, 190, 0.1);
+            border: 1px solid rgba(27, 111, 190, 0.18);
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 5px 14px;
+            border-radius: 100px;
+            margin-bottom: 22px;
+            letter-spacing: .04em;
+        }
+        
+        .h-dot {
+            width: 5px;
+            height: 5px;
+            background: var(--blue-lt);
+            border-radius: 50%;
+        }
+        
+        .hero-desc {
+            font-size: 17px;
+            color: var(--mid);
+            line-height: 1.75;
+            margin: 18px 0 36px;
+            max-width: 500px;
+        }
+        
+        .hero-kpi {
+            display: flex;
+            gap: 28px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(27, 111, 190, 0.14);
+            margin-top: 4px;
+        }
+        
+        .kpi-num {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--blue);
+            line-height: 1;
+        }
+        
+        .kpi-lbl {
+            font-size: 11.5px;
+            color: var(--muted);
+            margin-top: 3px;
+        }
+        /* Dashboard cards */
+        
+        .dash-wrap {
+            position: relative;
+            height: 430px;
+        }
+        
+        .dc {
+            position: absolute;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--r-lg);
+            box-shadow: var(--sh);
+            padding: 22px 24px;
+        }
+        
+        .dc-main {
+            width: 300px;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+        
+        .dc-hd {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+        
+        .dc-ico {
+            width: 36px;
+            height: 36px;
+            background: var(--blue-pale);
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        
+        .dc-hd-txt {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--blue-dk);
+        }
+        
+        .dc-hd-sub {
+            font-size: 11px;
+            color: var(--muted);
+        }
+        
+        .bar-r {
+            margin-bottom: 9px;
+        }
+        
+        .bar-lbl {
+            font-size: 11px;
+            color: var(--muted);
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3px;
+        }
+        
+        .bar-lbl strong {
+            color: var(--blue);
+            font-weight: 700;
+        }
+        
+        .bar-t {
+            height: 4px;
+            background: #e8f0f8;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        
+        .bar-f {
+            height: 100%;
+            background: linear-gradient(90deg, var(--blue), var(--blue-lt));
+            border-radius: 2px;
+        }
+        
+        .dc-r1 {
+            width: 158px;
+            top: 24px;
+            right: -10px;
+            z-index: 4;
+        }
+        
+        .dc-r1 .big {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--blue);
+            line-height: 1;
+            margin: 4px 0;
+        }
+        
+        .dc-r1 .up {
+            font-size: 11px;
+            color: #16a34a;
+            font-weight: 700;
+        }
+        
+        .dc-r2 {
+            bottom: 32px;
+            left: -12px;
+            z-index: 4;
+            width: 194px;
+        }
+        
+        .dc-r3 {
+            bottom: 0;
+            right: 0;
+            z-index: 3;
+            width: 148px;
+            padding: 16px 18px;
+        }
+        
+        .pill-g {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 8px;
+        }
+        
+        .pill {
+            background: var(--blue-pale);
+            color: var(--blue);
+            font-size: 10.5px;
+            font-weight: 600;
+            padding: 3px 9px;
+            border-radius: 100px;
+        }
+        /* Services */
+        
+        .svc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+        
+        .svc {
+            display: block;
+            text-decoration: none;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--r-lg);
+            padding: 28px 26px;
+            transition: all .2s;
+        }
+        
+        .svc:hover {
+            border-color: var(--blue);
+            box-shadow: var(--sh-md);
+            transform: translateY(-3px);
+        }
+        
+        .svc-n {
+            font-size: 10.5px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            color: var(--blue-lt);
+            margin-bottom: 14px;
+            text-transform: uppercase;
+        }
+        
+        .svc h3 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 15.5px;
+            font-weight: 700;
+            color: var(--blue-dk);
+            margin-bottom: 8px;
+        }
+        
+        .svc p {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.62;
+        }
+        
+        .svc-arr {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--blue);
+            font-size: 12.5px;
+            font-weight: 600;
+            margin-top: 14px;
+        }
+        /* Why */
+        
+        .why-l {
+            background: var(--blue-xpale);
+            border-radius: var(--r-xl);
+            padding: 40px;
+        }
+        
+        .why-item {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 22px;
+        }
+        
+        .why-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .why-ck {
+            width: 28px;
+            height: 28px;
+            background: var(--blue);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 1px;
+        }
+        
+        .why-item h4 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 14.5px;
+            font-weight: 700;
+            color: var(--blue-dk);
+            margin-bottom: 3px;
+        }
+        
+        .why-item p {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        /* Ind */
+        
+        .ind-g {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+        
+        .ind {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--r);
+            padding: 18px 12px;
+            text-align: center;
+            cursor: default;
+            transition: all .18s;
+        }
+        
+        .ind:hover {
+            border-color: var(--blue);
+            background: var(--blue-xpale);
+        }
+        
+        .ind-i {
+            font-size: 20px;
+            display: block;
+            margin-bottom: 7px;
+        }
+        
+        .ind span {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--mid);
+        }
+        
+        .ind:hover span {
+            color: var(--blue);
+        }
+        /* CTA box */
+        
+        .cta-box {
+            background: linear-gradient(140deg, var(--navy) 0%, var(--blue-dk) 100%);
+            border-radius: var(--r-xl);
+            padding: 64px 56px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.03);
+        }
+        
+        .cta-box h2 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 36px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 12px;
+            letter-spacing: -.01em;
+        }
+        
+        .cta-box p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.65);
+            margin-bottom: 32px;
+        }
+        
+        @media(max-width:960px) {
+            .hero-grid,
+            .why-r {
+                grid-template-columns: 1fr;
+            }
+            .dash-wrap {
+                display: none;
+            }
+            .svc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .ind-g {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ticker">
+        <div class="tk-track"><span class="tk-item">Performance Marketing</span><span class="tk-item">SEO &amp; SEM</span><span class="tk-item">Paid Media</span><span class="tk-item">Social Media Marketing</span><span class="tk-item">Influencer Marketing</span><span class="tk-item">Brand Strategy</span>
+            <span class="tk-item">Lead Generation</span><span class="tk-item">Email &amp; CRM</span><span class="tk-item">Content Marketing</span><span class="tk-item">Conversion Optimisation</span><span class="tk-item">Google Ads</span><span class="tk-item">Meta Advertising</span>
+            <span class="tk-item">Performance Marketing</span><span class="tk-item">SEO &amp; SEM</span><span class="tk-item">Paid Media</span><span class="tk-item">Social Media Marketing</span><span class="tk-item">Influencer Marketing</span><span class="tk-item">Brand Strategy</span>
+            <span class="tk-item">Lead Generation</span><span class="tk-item">Email &amp; CRM</span><span class="tk-item">Content Marketing</span><span class="tk-item">Conversion Optimisation</span><span class="tk-item">Google Ads</span><span class="tk-item">Meta Advertising</span></div>
+    </div>
+    <div class="topbar">
+        <div class="topbar-l">
+            <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> CSL 0513 Ecocentre, Sector V, Bidhannagar, Kolkata 700091</span>
+            <span class="sep">|</span><a href="mailto:india@rocmob.com">india@rocmob.com</a>
+        </div>
+        <div class="topbar-r">
+            <a href="tel:+919000000000">+91 90000 00000</a>
+            <span class="sep">|</span><a href="#">LinkedIn</a><a href="#">Instagram</a>
+        </div>
+    </div>
+    <header>
+        <div class="hdr-inner">
+            <a href="index.html" style="display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0;">
+                <svg width="48" height="38" viewBox="0 0 60 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Rocmob logo mark">
+  <!-- R: vertical stem + bowl + diagonal leg -->
+  <rect x="2" y="4" width="6" height="36" fill="#1B6FBE"/>
+  <path d="M8 4 H22 C27 4 31 8 31 14 C31 19 28 23 23 24 L31 40 H24 L17 25 H8 V40 H2 V4Z M8 10 V20 H21 C24 20 25 18 25 14 C25 11 23 10 21 10Z" fill="#1B6FBE"/>
+  <!-- diagonal leg of R cuts across -->
+  <polygon points="17,25 24,25 32,40 25,40" fill="#1B6FBE"/>
+  <!-- M: two peaks -->
+  <polygon points="34,4 34,40 40,40 40,16 47,28 54,16 54,40 60,40 60,4 54,4 47,18 40,4" fill="#1B6FBE"/>
+</svg>
+                <div style="display:flex;flex-direction:column;line-height:1;">
+                    <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:17px;font-weight:700;color:#0D3560;letter-spacing:0.08em;">ROCMOB</span>
+                    <span style="font-size:9.5px;font-weight:500;color:#6b7f96;letter-spacing:0.09em;text-transform:uppercase;margin-top:2px;">Performance Limited · India</span>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="act">Home</a></li>
+                    <li class="has-dd"><a href="services.html">Services</a>
+                        <div class="dd">
+                            <div class="dd-inner">
+                                <a href="services.html#perf"><span class="dd-ico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>Performance Marketing</a>
+                                <a href="services.html#seo"><span class="dd-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>SEO &amp; Search</a>
+                                <a href="services.html#social"><span class="dd-ico"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></span>Social Media</a>
+                                <a href="services.html#influencer"><span class="dd-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>Influencer Marketing</a>
+                                <a href="services.html#email"><span class="dd-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>Email &amp; CRM</a>
+                                <a href="services.html#content"><span class="dd-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>Content Strategy</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="blog.html">Insights</a></li>
+                    <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="wrap hero-grid">
+            <div>
+                <div class="hero-badge"><span class="h-dot"></span>India's Performance-First Digital Agency</div>
+                <h1 class="disp">Grow Faster.<br>Convert Smarter.<br><span>Perform Better.</span></h1>
+                <p class="hero-desc">Rocmob Performance Limited delivers globally proven digital marketing methodology to Indian businesses — measurable ROI through performance marketing, SEO, social media, and full-funnel growth from our Kolkata base.</p>
+                <div style="display:flex;gap:12px;flex-wrap:wrap;">
+                    <a href="contact.html" class="btn btn-primary">Start Growing Today →</a>
+                    <a href="services.html" class="btn btn-outline">Our Services</a>
+                </div>
+                <div class="hero-kpi">
+                    <div>
+                        <div class="kpi-num">500+</div>
+                        <div class="kpi-lbl">Campaigns Delivered</div>
+                    </div>
+                    <div>
+                        <div class="kpi-num">3.8×</div>
+                        <div class="kpi-lbl">Average ROAS</div>
+                    </div>
+                    <div>
+                        <div class="kpi-num">98%</div>
+                        <div class="kpi-lbl">Client Retention</div>
+                    </div>
+                </div>
+            </div>
+            <div class="dash-wrap">
+                <div class="dc dc-main">
+                    <div class="dc-hd">
+                        <div class="dc-ico" style="color:var(--blue);display:block;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+                        <div>
+                            <div class="dc-hd-txt">Campaign Dashboard</div>
+                            <div class="dc-hd-sub">Q4 2024 · Live Overview</div>
+                        </div>
+                    </div>
+                    <div class="bar-r">
+                        <div class="bar-lbl"><span>Organic Traffic</span><strong>+87%</strong></div>
+                        <div class="bar-t">
+                            <div class="bar-f" style="width:87%"></div>
+                        </div>
+                    </div>
+                    <div class="bar-r">
+                        <div class="bar-lbl"><span>Conversion Rate</span><strong>+61%</strong></div>
+                        <div class="bar-t">
+                            <div class="bar-f" style="width:61%"></div>
+                        </div>
+                    </div>
+                    <div class="bar-r">
+                        <div class="bar-lbl"><span>ROAS Achieved</span><strong>3.8×</strong></div>
+                        <div class="bar-t">
+                            <div class="bar-f" style="width:76%"></div>
+                        </div>
+                    </div>
+                    <div class="bar-r">
+                        <div class="bar-lbl"><span>Lead Volume</span><strong>+73%</strong></div>
+                        <div class="bar-t">
+                            <div class="bar-f" style="width:73%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dc dc-r1">
+                    <div style="font-size:11px;color:var(--muted);">Revenue Growth</div>
+                    <div class="big">₹4.2Cr</div>
+                    <div class="up">↑ +92% YoY</div>
+                </div>
+                <div class="dc dc-r2">
+                    <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:12px;font-weight:700;color:var(--blue-dk);margin-bottom:8px;">Active Channels</div>
+                    <div class="pill-g">
+                        <span class="pill">Google Ads</span><span class="pill">Meta</span><span class="pill">SEO</span>
+                        <span class="pill">Email</span><span class="pill">LinkedIn</span><span class="pill">YouTube</span>
+                    </div>
+                </div>
+                <div class="dc dc-r3">
+                    <div style="font-size:11px;color:var(--muted);">Leads / Month</div>
+                    <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;color:#16a34a;margin:3px 0;">1,284</div>
+                    <div style="font-size:10.5px;color:var(--muted);">↑ 73% vs prior</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div class="stats-inner">
+            <div class="stat">
+                <div class="stat-n">500<span class="stat-u">+</span></div>
+                <div class="stat-l">Campaigns Delivered</div>
+            </div>
+            <div class="stat">
+                <div class="stat-n">3.8<span class="stat-u">×</span></div>
+                <div class="stat-l">Average ROAS</div>
+            </div>
+            <div class="stat">
+                <div class="stat-n">98<span class="stat-u">%</span></div>
+                <div class="stat-l">Client Retention Rate</div>
+            </div>
+            <div class="stat">
+                <div class="stat-n">10<span class="stat-u">+</span></div>
+                <div class="stat-l">Industries Served</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="sec">
+        <div class="wrap">
+            <span class="lbl">What We Do</span>
+            <h2 class="hd">Performance Services <span>Built for India</span></h2>
+            <p class="sub">Every service is engineered around one goal — measurable, scalable growth for your business.</p>
+            <div class="svc-grid">
+                <a href="services.html#perf" class="svc">
+                    <div class="svc-n">01</div>
+                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                    <h3>Performance Marketing</h3>
+                    <p>ROI-first paid campaigns across Google, Meta, and Programmatic — every rupee tracked and optimised.</p>
+                    <div class="svc-arr">Learn More →</div>
+                </a>
+                <a href="services.html#seo" class="svc">
+                    <div class="svc-n">02</div>
+                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                    <h3>SEO &amp; Search Marketing</h3>
+                    <p>Technical SEO, content authority, and SEM to dominate India's most competitive search terms.</p>
+                    <div class="svc-arr">Learn More →</div>
+                </a>
+                <a href="services.html#social" class="svc">
+                    <div class="svc-n">03</div>
+                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+                    <h3>Social Media Marketing</h3>
+                    <p>Organic and paid social across Instagram, LinkedIn, YouTube, and emerging Indian platforms.</p>
+                    <div class="svc-arr">Learn More →</div>
+                </a>
+                <a href="services.html#influencer" class="svc">
+                    <div class="svc-n">04</div>
+                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+                    <h3>Influencer Marketing</h3>
+                    <p>Strategic partnerships with India's top content creators to drive reach and attributable conversions.</p>
+                    <div class="svc-arr">Learn More →</div>
+                </a>
+                <a href="services.html#email" class="svc">
+                    <div class="svc-n">05</div>
+                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                    <h3>Email &amp; CRM Automation</h3>
+                    <p>Precision nurture flows and CRM automation that convert leads into high-value customers.</p>
+                    <div class="svc-arr">Learn More →</div>
+                </a>
+                <a href="services.html#content" class="svc">
+                    <div class="svc-n">06</div>
+                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+                    <h3>Content &amp; Brand Strategy</h3>
+                    <p>Purpose-built content strategy and brand storytelling that resonates with Indian audiences.</p>
+                    <div class="svc-arr">Learn More →</div>
+                </a>
+            </div>
+            <div style="text-align:center;margin-top:36px;"><a href="services.html" class="btn btn-primary">View All Services →</a></div>
+        </div>
+    </section>
+
+    <section class="sec sec-alt">
+        <div class="wrap">
+            <div class="g2" style="align-items:center;gap:64px;">
+                <div class="why-l">
+                    <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:12px;font-weight:700;color:var(--blue);margin-bottom:20px;letter-spacing:.06em;text-transform:uppercase;">Client Snapshot</div>
+                    <div style="background:#fff;border-radius:var(--r-lg);padding:20px;border:1px solid var(--border);margin-bottom:12px;">
+                        <div style="font-size:12.5px;color:var(--muted);margin-bottom:6px;">E-Commerce Brand · Mumbai</div>
+                        <div style="font-size:13.5px;color:var(--mid);font-style:italic;line-height:1.65;">"Rocmob scaled our Google ROAS from 1.8× to 4.2× within 90 days. Transparent, rigorous, and genuinely invested in our growth."</div>
+                        <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:12px;font-weight:700;color:var(--blue-dk);margin-top:10px;">— Head of Marketing, ShopRight India</div>
+                    </div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                        <div style="background:#fff;border-radius:var(--r);padding:14px;border:1px solid var(--border);text-align:center;">
+                            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:800;color:var(--blue);">3×</div>
+                            <div style="font-size:11px;color:var(--muted);">Lead Growth</div>
+                        </div>
+                        <div style="background:var(--blue);border-radius:var(--r);padding:14px;text-align:center;">
+                            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:800;color:#fff;">₹4Cr</div>
+                            <div style="font-size:11px;color:rgba(255,255,255,0.7);">Revenue Added</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span class="lbl">Why Rocmob India</span>
+                    <h2 class="hd">Global Methods.<br><span>Indian Market Mastery.</span></h2>
+                    <p style="font-size:15.5px;color:var(--muted);line-height:1.75;margin-bottom:28px;">The Indian arm of an internationally operating performance agency — world-class methodology adapted for India's unique digital ecosystem.</p>
+                    <div>
+                        <div class="why-item">
+                            <div class="why-ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg></div>
+                            <div>
+                                <h4>Senior-Only Teams</h4>
+                                <p>Every client works directly with senior strategists from day one — never handed off.</p>
+                            </div>
+                        </div>
+                        <div class="why-item">
+                            <div class="why-ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg></div>
+                            <div>
+                                <h4>Data-First Every Decision</h4>
+                                <p>Live dashboards, weekly reports, and zero vanity metrics. Only what drives real business growth.</p>
+                            </div>
+                        </div>
+                        <div class="why-item">
+                            <div class="why-ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg></div>
+                            <div>
+                                <h4>Full-Funnel Accountability</h4>
+                                <p>We own results end-to-end: awareness, acquisition, conversion, and retention.</p>
+                            </div>
+                        </div>
+                        <div class="why-item">
+                            <div class="why-ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg></div>
+                            <div>
+                                <h4>India-Specific Expertise</h4>
+                                <p>Deep knowledge of Indian consumer behaviour, regional platforms, and market dynamics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top:28px;"><a href="about.html" class="btn btn-primary">About Rocmob India →</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec">
+        <div class="wrap">
+            <div style="text-align:center;margin-bottom:44px;">
+                <span class="lbl">Industries</span>
+                <h2 class="hd">We Know <span>Your Market</span></h2>
+                <p class="sub" style="margin:0 auto;">Tailored strategies for the competitive dynamics of your sector.</p>
+            </div>
+            <div class="ind-g">
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></span><span>E-Commerce &amp; Retail</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span><span>Healthcare &amp; Pharma</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><span>Real Estate</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span><span>EdTech &amp; Education</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span><span>BFSI &amp; Fintech</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></span><span>Food &amp; Hospitality</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></span><span>Travel &amp; Tourism</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span><span>SaaS &amp; Tech</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V3M8 7V3M2 13h20"/></svg></span><span>Manufacturing</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M9 2v6"/><path d="M15 2v6"/><path d="M8 2h8"/><rect x="5" y="8" width="14" height="14" rx="2"/><path d="M10 12h4M12 10v4"/></svg></span><span>D2C &amp; Beauty</span></div>
+            </div>
+            <div style="text-align:center;margin-top:32px;"><a href="industries.html" class="btn btn-outline">Explore All Industries →</a></div>
+        </div>
+    </section>
+
+    <section class="sec sec-alt">
+        <div class="wrap">
+            <div style="text-align:center;margin-bottom:44px;">
+                <span class="lbl">Client Testimonials</span>
+                <h2 class="hd">Results That <span>Speak</span></h2>
+            </div>
+            <div class="g3">
+                <div class="testi">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>"Rocmob transformed our digital presence in 6 months — organic traffic tripled, leads doubled. Their understanding of the Indian market is unmatched."</blockquote>
+                    <div class="t-auth">
+                        <div class="t-av">CK</div>
+                        <div class="t-av-info">
+                            <h5>Chief Marketing Officer</h5><span>SaaS Platform, Bengaluru</span></div>
+                    </div>
+                </div>
+                <div class="testi">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>"Google Ads ROAS went from 1.8× to 4.2× in three months. Completely transparent — we see every decision, every number, every rationale."</blockquote>
+                    <div class="t-auth">
+                        <div class="t-av">VP</div>
+                        <div class="t-av-info">
+                            <h5>VP Marketing</h5><span>E-Commerce Brand, Mumbai</span></div>
+                    </div>
+                </div>
+                <div class="testi">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>"No inflated promises — just solid strategy and real execution. Real estate lead volume grew 68% in a single quarter. Absolutely outstanding team."</blockquote>
+                    <div class="t-auth">
+                        <div class="t-av">MD</div>
+                        <div class="t-av-info">
+                            <h5>Managing Director</h5><span>Real Estate Developer, Kolkata</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec">
+        <div class="wrap">
+            <div class="cta-box">
+                <div style="position:relative;z-index:1;">
+                    <span class="lbl lbl-dk">Get Started</span>
+                    <h2>Ready to Scale Your Business?</h2>
+                    <p>Tell us your goals — we'll build a custom growth strategy, free of charge.</p>
+                    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+                        <a href="contact.html" class="btn btn-white">Book a Free Strategy Call →</a>
+                        <a href="services.html" class="btn btn-white-outline">View Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="ft-main">
+            <div class="ft-grid">
+                <div class="ft-brand">
+                    <a href="index.html" style="display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0;">
+                        <svg width="48" height="38" viewBox="0 0 60 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Rocmob logo mark">
+  <!-- R: vertical stem + bowl + diagonal leg -->
+  <rect x="2" y="4" width="6" height="36" fill="#ffffff"/>
+  <path d="M8 4 H22 C27 4 31 8 31 14 C31 19 28 23 23 24 L31 40 H24 L17 25 H8 V40 H2 V4Z M8 10 V20 H21 C24 20 25 18 25 14 C25 11 23 10 21 10Z" fill="#ffffff"/>
+  <!-- diagonal leg of R cuts across -->
+  <polygon points="17,25 24,25 32,40 25,40" fill="#ffffff"/>
+  <!-- M: two peaks -->
+  <polygon points="34,4 34,40 40,40 40,16 47,28 54,16 54,40 60,40 60,4 54,4 47,18 40,4" fill="#ffffff"/>
+</svg>
+                        <div style="display:flex;flex-direction:column;line-height:1;">
+                            <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:17px;font-weight:700;color:#ffffff;letter-spacing:0.08em;">ROCMOB</span>
+                            <span style="font-size:9.5px;font-weight:500;color:rgba(255,255,255,0.55);letter-spacing:0.09em;text-transform:uppercase;margin-top:2px;">Performance Limited · India</span>
+                        </div>
+                    </a>
+                    <p>India's performance-first digital marketing agency — backed by global Rocmob Group expertise. Rooted in Kolkata, serving brands across India.</p>
+                    <p style="margin-top:12px;font-size:12.5px;color:rgba(255,255,255,0.35);">CSL 0513 Ecocentre, EM Block<br>Sector V, Bidhannagar, Kolkata 700091</p>
+                </div>
+                <div class="ft-col">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="services.html#perf">Performance Marketing</a></li>
+                        <li><a href="services.html#seo">SEO &amp; SEM</a></li>
+                        <li><a href="services.html#social">Social Media</a></li>
+                        <li><a href="services.html#influencer">Influencer Marketing</a></li>
+                        <li><a href="services.html#email">Email &amp; CRM</a></li>
+                        <li><a href="services.html#content">Content Strategy</a></li>
+                    </ul>
+                </div>
+                <div class="ft-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#values">Our Values</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="blog.html">Insights</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="ft-col">
+                    <h5>Industries</h5>
+                    <ul>
+                        <li><a href="industries.html">E-Commerce</a></li>
+                        <li><a href="industries.html">Real Estate</a></li>
+                        <li><a href="industries.html">EdTech</a></li>
+                        <li><a href="industries.html">Healthcare</a></li>
+                        <li><a href="industries.html">BFSI &amp; Fintech</a></li>
+                        <li><a href="industries.html">SaaS &amp; Tech</a></li>
+                    </ul>
+                </div>
+                <div class="ft-col">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li><a href="mailto:india@rocmob.com">india@rocmob.com</a></li>
+                        <li><a href="tel:+919000000000">+91 90000 00000</a></li>
+                        <li><span style="color:rgba(255,255,255,0.35)">Mon–Fri 9:30 AM–6:30 PM</span></li>
+                        <li><span style="color:rgba(255,255,255,0.35)">Sat 10:00 AM–3:00 PM IST</span></li>
+                    </ul>
+                    <div style="margin-top:20px;"><a href="contact.html" class="btn btn-primary btn-sm">Free Audit →</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="ft-bot">
+            <p>© 2025 Rocmob Performance Limited. All rights reserved. Part of the Rocmob Group.</p>
+            <div class="soc"><a href="#">in</a><a href="#">Ig</a><a href="#">𝕏</a><a href="#">YT</a></div>
+        </div>
+    </footer>
+    <script>
+        (function() {
+            var dds = document.querySelectorAll('.has-dd');
+            dds.forEach(function(el) {
+                var link = el.querySelector(':scope > a');
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var isOpen = el.classList.contains('open');
+                    dds.forEach(function(d) {
+                        d.classList.remove('open');
+                    });
+                    if (!isOpen) el.classList.add('open');
+                });
+            });
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.has-dd')) dds.forEach(function(d) {
+                    d.classList.remove('open');
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
