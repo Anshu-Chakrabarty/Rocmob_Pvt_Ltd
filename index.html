@@ -62,27 +62,12 @@
             margin: 18px 0 36px;
             max-width: 500px;
         }
+        /* Hero CTA buttons with subtle spacing below */
         
-        .hero-kpi {
+        .hero-cta-row {
             display: flex;
-            gap: 28px;
-            padding-top: 28px;
-            border-top: 1px solid rgba(27, 111, 190, 0.14);
-            margin-top: 4px;
-        }
-        
-        .kpi-num {
-            font-family: 'Bricolage Grotesque', sans-serif;
-            font-size: 24px;
-            font-weight: 800;
-            color: var(--blue);
-            line-height: 1;
-        }
-        
-        .kpi-lbl {
-            font-size: 11.5px;
-            color: var(--muted);
-            margin-top: 3px;
+            gap: 12px;
+            flex-wrap: wrap;
         }
         /* Dashboard cards */
         
@@ -321,7 +306,7 @@
             color: var(--muted);
             line-height: 1.6;
         }
-        /* Ind */
+        /* Industries */
         
         .ind-g {
             display: grid;
@@ -395,11 +380,16 @@
             color: rgba(255, 255, 255, 0.65);
             margin-bottom: 32px;
         }
+        /* Stats bar — enhanced with a subtle top accent line */
         
-
-.social-icon:hover svg {
-    transform: scale(1.2); /* icon zoom */
-}
+        .stats-bar {
+            border-top: 3px solid var(--blue);
+        }
+        
+        .social-icon:hover svg {
+            transform: scale(1.2);
+        }
+        
         @media(max-width:960px) {
             .hero-grid,
             .why-r {
@@ -415,55 +405,87 @@
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-
-        /* Tablet */
+        
         @media(max-width:768px) {
-            .hero { padding: 52px 0 44px; }
-            .hero-grid { gap: 32px !important; }
-            .hero-desc { font-size: 15.5px; max-width: 100%; }
-            .hero-kpi { flex-wrap: wrap; gap: 20px; }
-            .svc-grid { grid-template-columns: 1fr 1fr; }
-            .ind-g { grid-template-columns: repeat(3, 1fr); }
-            .cta-box { padding: 44px 28px; }
-            .cta-box h2 { font-size: clamp(22px, 5vw, 30px); }
-            .cta-box > div > div[style*="display:flex"] {
+            .hero {
+                padding: 52px 0 44px;
+            }
+            .hero-grid {
+                gap: 32px !important;
+            }
+            .hero-desc {
+                font-size: 15.5px;
+                max-width: 100%;
+            }
+            .svc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .ind-g {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .cta-box {
+                padding: 44px 28px;
+            }
+            .cta-box h2 {
+                font-size: clamp(22px, 5vw, 30px);
+            }
+            .cta-box>div>div[style*="display:flex"] {
                 flex-wrap: wrap !important;
                 justify-content: center !important;
             }
         }
-
-        /* Mobile */
+        
         @media(max-width:480px) {
-            .svc-grid { grid-template-columns: 1fr; }
-            .ind-g { grid-template-columns: repeat(2, 1fr); }
-            .cta-box { padding: 36px 20px; }
-            .hero { padding: 40px 0 36px; }
-            .hero-kpi { flex-direction: column; gap: 14px; }
+            .svc-grid {
+                grid-template-columns: 1fr;
+            }
+            .ind-g {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .cta-box {
+                padding: 36px 20px;
+            }
+            .hero {
+                padding: 40px 0 36px;
+            }
+            .hero-cta-row {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="ticker">
-        <div class="tk-track"><span class="tk-item">Performance Marketing</span><span class="tk-item">SEO &amp; SEM</span><span class="tk-item">Paid Media</span><span class="tk-item">Social Media Marketing</span><span class="tk-item">Influencer Marketing</span><span class="tk-item">Brand Strategy</span>
+        <div class="tk-track">
+            <span class="tk-item">Performance Marketing</span><span class="tk-item">SEO &amp; SEM</span><span class="tk-item">Paid Media</span><span class="tk-item">Social Media Marketing</span><span class="tk-item">Influencer Marketing</span><span class="tk-item">Brand Strategy</span>
             <span class="tk-item">Lead Generation</span><span class="tk-item">Email &amp; CRM</span><span class="tk-item">Content Marketing</span><span class="tk-item">Conversion Optimisation</span><span class="tk-item">Google Ads</span><span class="tk-item">Meta Advertising</span>
             <span class="tk-item">Performance Marketing</span><span class="tk-item">SEO &amp; SEM</span><span class="tk-item">Paid Media</span><span class="tk-item">Social Media Marketing</span><span class="tk-item">Influencer Marketing</span><span class="tk-item">Brand Strategy</span>
-            <span class="tk-item">Lead Generation</span><span class="tk-item">Email &amp; CRM</span><span class="tk-item">Content Marketing</span><span class="tk-item">Conversion Optimisation</span><span class="tk-item">Google Ads</span><span class="tk-item">Meta Advertising</span></div>
+            <span class="tk-item">Lead Generation</span><span class="tk-item">Email &amp; CRM</span><span class="tk-item">Content Marketing</span><span class="tk-item">Conversion Optimisation</span><span class="tk-item">Google Ads</span><span class="tk-item">Meta Advertising</span>
+        </div>
     </div>
+
     <div class="topbar">
         <div class="topbar-l">
-            <a href="https://maps.app.goo.gl/XQaKYKdHNQYxbWKZ6" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> CSL 0513 Ecocentre, Sector V, Bidhannagar, Kolkata 700091</a>
-            <span class="sep">|</span><a href="mailto:sales@rocmob.com" style="display:flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>sales@rocmob.com</a>
+            <a href="https://maps.app.goo.gl/XQaKYKdHNQYxbWKZ6" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:6px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>                CSL 0513 Ecocentre, Sector V, Bidhannagar, Kolkata 700091
+            </a>
+            <span class="sep">|</span>
+            <a href="mailto:sales@rocmob.com" style="display:flex;align-items:center;gap:5px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>                sales@rocmob.com
+            </a>
         </div>
         <div class="topbar-r">
-            <a href="tel:03346049461" style="display:flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.09 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>03346049461</a>
+            <a href="tel:03346049461" style="display:flex;align-items:center;gap:5px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.09 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>                03346049461
+            </a>
             <span class="sep">|</span><a href="#">LinkedIn</a><a href="#">Instagram</a>
         </div>
     </div>
+
     <header>
         <div class="hdr-inner">
             <a href="index.html" style="display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0;">
-                
                 <img src="rocmob logo.png" alt="Rocmob Logo" class="nav-logo">
             </a>
             <nav>
@@ -488,12 +510,11 @@
                 </ul>
             </nav>
             <button class="nav-burger" id="navBurger" aria-label="Open menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </header>
+
     <!-- Mobile Nav Overlay -->
     <div class="mob-nav" id="mobNav">
         <div class="mob-backdrop" id="mobBackdrop"></div>
@@ -530,12 +551,10 @@
             <div class="mob-foot">
                 <div class="mob-contact">
                     <a href="mailto:sales@rocmob.com">
-                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        sales@rocmob.com
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> sales@rocmob.com
                     </a>
                     <a href="tel:03346049461">
-                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.09 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                        033 4604 9461
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.09 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>                        033 4604 9461
                     </a>
                 </div>
                 <p style="font-size:11.5px;color:var(--muted);">Mon–Fri 9:30 AM–6:30 PM IST</p>
@@ -543,36 +562,25 @@
         </div>
     </div>
 
-
+    <!-- ═══════════════════ HERO ═══════════════════ -->
     <section class="hero">
         <div class="wrap hero-grid">
             <div>
                 <div class="hero-badge"><span class="h-dot"></span>Global Performance-First Digital Agency</div>
                 <h1 class="disp">Grow Faster.<br>Convert Smarter.<br><span>Perform Better.</span></h1>
                 <p class="hero-desc">Rocmob Performance Limited delivers globally proven digital marketing methodology to businesses worldwide — measurable ROI through performance marketing, SEO, social media, and full-funnel growth from our international network.</p>
-                <div style="display:flex;gap:12px;flex-wrap:wrap;">
+                <!-- CTA buttons only — stats live in the stats bar below -->
+                <div class="hero-cta-row">
                     <a href="contact.html" class="btn btn-primary">Start Growing Today →</a>
                     <a href="services.html" class="btn btn-outline">Our Services</a>
-                </div>
-                <div class="hero-kpi">
-                    <div>
-                        <div class="kpi-num">500+</div>
-                        <div class="kpi-lbl">Campaigns Delivered</div>
-                    </div>
-                    <div>
-                        <div class="kpi-num">3.8×</div>
-                        <div class="kpi-lbl">Average ROAS</div>
-                    </div>
-                    <div>
-                        <div class="kpi-num">98%</div>
-                        <div class="kpi-lbl">Client Retention</div>
-                    </div>
                 </div>
             </div>
             <div class="dash-wrap">
                 <div class="dc dc-main">
                     <div class="dc-hd">
-                        <div class="dc-ico" style="color:var(--blue);display:block;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+                        <div class="dc-ico" style="color:var(--blue);display:block;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        </div>
                         <div>
                             <div class="dc-hd-txt">Campaign Dashboard</div>
                             <div class="dc-hd-sub">Q4 2024 · Live Overview</div>
@@ -624,6 +632,7 @@
         </div>
     </section>
 
+    <!-- ═══════════════════ STATS BAR (single source of truth for KPIs) ═══════════════════ -->
     <div class="stats-bar">
         <div class="stats-inner">
             <div class="stat">
@@ -645,6 +654,7 @@
         </div>
     </div>
 
+    <!-- ═══════════════════ SERVICES ═══════════════════ -->
     <section class="sec">
         <div class="wrap">
             <span class="lbl">What We Do</span>
@@ -653,42 +663,42 @@
             <div class="svc-grid">
                 <a href="services.html#perf" class="svc">
                     <div class="svc-n">01</div>
-                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
                     <h3>Performance Marketing</h3>
                     <p>ROI-first paid campaigns across Google, Meta, and Programmatic — every rupee tracked and optimised.</p>
                     <div class="svc-arr">Learn More →</div>
                 </a>
                 <a href="services.html#seo" class="svc">
                     <div class="svc-n">02</div>
-                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
                     <h3>SEO &amp; Search Marketing</h3>
                     <p>Technical SEO, content authority, and SEM to dominate your most competitive global and local search terms.</p>
                     <div class="svc-arr">Learn More →</div>
                 </a>
                 <a href="services.html#social" class="svc">
                     <div class="svc-n">03</div>
-                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
                     <h3>Social Media Marketing</h3>
                     <p>Organic and paid social across Instagram, LinkedIn, YouTube, Facebook, and emerging global platforms.</p>
                     <div class="svc-arr">Learn More →</div>
                 </a>
                 <a href="services.html#influencer" class="svc">
                     <div class="svc-n">04</div>
-                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
                     <h3>Influencer Marketing</h3>
                     <p>Strategic partnerships with the world's top content creators to drive reach and attributable conversions.</p>
                     <div class="svc-arr">Learn More →</div>
                 </a>
                 <a href="services.html#email" class="svc">
                     <div class="svc-n">05</div>
-                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
                     <h3>Email &amp; CRM Automation</h3>
                     <p>Precision nurture flows and CRM automation that convert leads into high-value customers.</p>
                     <div class="svc-arr">Learn More →</div>
                 </a>
                 <a href="services.html#content" class="svc">
                     <div class="svc-n">06</div>
-                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+                    <div style="margin-bottom:14px;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
                     <h3>Content &amp; Brand Strategy</h3>
                     <p>Purpose-built content strategy and brand storytelling that resonates with global audiences.</p>
                     <div class="svc-arr">Learn More →</div>
@@ -698,6 +708,7 @@
         </div>
     </section>
 
+    <!-- ═══════════════════ WHY ROCMOB ═══════════════════ -->
     <section class="sec sec-alt">
         <div class="wrap">
             <div class="g2" style="align-items:center;gap:64px;">
@@ -725,28 +736,28 @@
                     <p style="font-size:15.5px;color:var(--muted);line-height:1.75;margin-bottom:28px;">An internationally operating performance agency — world-class methodology adapted for each market's unique digital ecosystem.</p>
                     <div>
                         <div class="why-item">
-                            <div class="why-ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg></div>
+                            <div class="why-ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                             <div>
                                 <h4>Senior-Only Teams</h4>
                                 <p>Every client works directly with senior strategists from day one — never handed off.</p>
                             </div>
                         </div>
                         <div class="why-item">
-                            <div class="why-ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg></div>
+                            <div class="why-ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                             <div>
                                 <h4>Data-First Every Decision</h4>
                                 <p>Live dashboards, weekly reports, and zero vanity metrics. Only what drives real business growth.</p>
                             </div>
                         </div>
                         <div class="why-item">
-                            <div class="why-ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg></div>
+                            <div class="why-ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                             <div>
                                 <h4>Full-Funnel Accountability</h4>
                                 <p>We own results end-to-end: awareness, acquisition, conversion, and retention.</p>
                             </div>
                         </div>
                         <div class="why-item">
-                            <div class="why-ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg></div>
+                            <div class="why-ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                             <div>
                                 <h4>Market-Specific Expertise</h4>
                                 <p>Deep knowledge of local consumer behaviour, regional platforms, and market dynamics across every territory we serve.</p>
@@ -759,6 +770,7 @@
         </div>
     </section>
 
+    <!-- ═══════════════════ INDUSTRIES ═══════════════════ -->
     <section class="sec">
         <div class="wrap">
             <div style="text-align:center;margin-bottom:44px;">
@@ -767,21 +779,22 @@
                 <p class="sub" style="margin:0 auto;">Tailored strategies for the competitive dynamics of your sector.</p>
             </div>
             <div class="ind-g">
-                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></span><span>E-Commerce &amp; Retail</span></div>
-                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span><span>Healthcare &amp; Pharma</span></div>
-                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><span>Real Estate</span></div>
-                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span><span>EdTech &amp; Education</span></div>
-                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span><span>BFSI &amp; Fintech</span></div>
-                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></span><span>Food &amp; Hospitality</span></div>
-                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></span><span>Travel &amp; Tourism</span></div>
-                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span><span>SaaS &amp; Tech</span></div>
-                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V3M8 7V3M2 13h20"/></svg></span><span>Manufacturing</span></div>
-                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M9 2v6"/><path d="M15 2v6"/><path d="M8 2h8"/><rect x="5" y="8" width="14" height="14" rx="2"/><path d="M10 12h4M12 10v4"/></svg></span><span>D2C &amp; Beauty</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></span><span>E-Commerce &amp; Retail</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span><span>Healthcare &amp; Pharma</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><span>Real Estate</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span><span>EdTech &amp; Education</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span><span>BFSI &amp; Fintech</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></span><span>Food &amp; Hospitality</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></span><span>Travel &amp; Tourism</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span><span>SaaS &amp; Tech</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V3M8 7V3M2 13h20"/></svg></span><span>Manufacturing</span></div>
+                <div class="ind"><span class="ind-i" style="display:flex;justify-content:center;color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6"/><path d="M15 2v6"/><path d="M8 2h8"/><rect x="5" y="8" width="14" height="14" rx="2"/><path d="M10 12h4M12 10v4"/></svg></span><span>D2C &amp; Beauty</span></div>
             </div>
             <div style="text-align:center;margin-top:32px;"><a href="industries.html" class="btn btn-outline">Explore All Industries →</a></div>
         </div>
     </section>
 
+    <!-- ═══════════════════ CTA ═══════════════════ -->
     <section class="sec">
         <div class="wrap">
             <div class="cta-box">
@@ -798,15 +811,14 @@
         </div>
     </section>
 
-   <!--Footer-->
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
     <footer>
         <div class="ft-main">
             <div class="ft-grid">
                 <div class="ft-brand">
                     <a href="index.html" style="display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0;">
-                
-                <img src="rocmob logo.png" alt="Rocmob Logo" class="nav-logo">
-            </a>
+                        <img src="rocmob logo.png" alt="Rocmob Logo" class="nav-logo">
+                    </a>
                     <p>A global performance-first digital marketing agency — backed by the Rocmob Group. Rooted in Kolkata, serving brands worldwide.</p>
                     <p style="margin-top:12px;font-size:12.5px;color:rgba(255,255,255,0.35);">CSL 0513 Ecocentre, EM Block<br>Sector V, Bidhannagar, Kolkata 700091</p>
                 </div>
@@ -858,37 +870,22 @@
         <div class="ft-bot">
             <p>© 2025 Rocmob Performance Limited. All rights reserved. Part of the Rocmob Group.</p>
             <div class="soc">
-<!-- Facebook -->
-<a href="#" aria-label="Facebook" class="social-icon facebook">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
-  </svg>
-</a>
-
-<!-- LinkedIn -->
-<a href="#" aria-label="LinkedIn" class="social-icon linkedin">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M6.94 6.5A2.44 2.44 0 114.5 4.06a2.44 2.44 0 012.44 2.44zM4.75 8.75h4.38V20H4.75zM9.75 8.75h4.2v1.54h.06c.59-1.12 2.03-2.3 4.18-2.3 4.47 0 5.29 2.94 5.29 6.76V20h-4.38v-5.06c0-1.21-.02-2.76-1.68-2.76-1.68 0-1.94 1.31-1.94 2.67V20H9.75z"/>
-  </svg>
-</a>
-
-<!-- YouTube -->
-<a href="#" aria-label="YouTube" class="social-icon youtube">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M23 7s-.2-1.43-.82-2.06c-.78-.83-1.66-.83-2.06-.88C17.2 3.9 12 3.9 12 3.9h-.01s-5.2 0-8.12.16c-.4.05-1.28.05-2.06.88C1.2 5.57 1 7 1 7S.8 8.68.8 10.36v1.27C.8 13.32 1 15 1 15s.2 1.43.82 2.06c.78.83 1.8.8 2.26.89C6.8 18.1 12 18.1 12 18.1s5.2 0 8.12-.16c.4-.05 1.28-.05 2.06-.88.62-.63.82-2.06.82-2.06s.2-1.68.2-3.36v-1.27C23.2 8.68 23 7 23 7zM9.75 14.57V8.43l5.4 3.07-5.4 3.07z"/>
-  </svg>
-</a>
-
-<!-- Twitter -->
-<a href="#" aria-label="Twitter" class="social-icon twitter">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.29 3.9A12.14 12.14 0 013 4.79a4.28 4.28 0 001.32 5.72 4.22 4.22 0 01-1.94-.54v.05a4.29 4.29 0 003.43 4.2 4.29 4.29 0 01-1.93.07 4.29 4.29 0 004 2.98A8.6 8.6 0 012 19.54 12.13 12.13 0 008.56 21c7.87 0 12.17-6.52 12.17-12.17 0-.18 0-.36-.01-.53A8.7 8.7 0 0024 5.1a8.48 8.48 0 01-2.54.7z"/>
-  </svg>
-</a>
-  
-</div>
+                <a href="#" aria-label="Facebook" class="social-icon facebook">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                </a>
+                <a href="#" aria-label="LinkedIn" class="social-icon linkedin">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 6.5A2.44 2.44 0 114.5 4.06a2.44 2.44 0 012.44 2.44zM4.75 8.75h4.38V20H4.75zM9.75 8.75h4.2v1.54h.06c.59-1.12 2.03-2.3 4.18-2.3 4.47 0 5.29 2.94 5.29 6.76V20h-4.38v-5.06c0-1.21-.02-2.76-1.68-2.76-1.68 0-1.94 1.31-1.94 2.67V20H9.75z"/></svg>
+                </a>
+                <a href="#" aria-label="YouTube" class="social-icon youtube">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23 7s-.2-1.43-.82-2.06c-.78-.83-1.66-.83-2.06-.88C17.2 3.9 12 3.9 12 3.9h-.01s-5.2 0-8.12.16c-.4.05-1.28.05-2.06.88C1.2 5.57 1 7 1 7S.8 8.68.8 10.36v1.27C.8 13.32 1 15 1 15s.2 1.43.82 2.06c.78.83 1.8.8 2.26.89C6.8 18.1 12 18.1 12 18.1s5.2 0 8.12-.16c.4-.05 1.28-.05 2.06-.88.62-.63.82-2.06.82-2.06s.2-1.68.2-3.36v-1.27C23.2 8.68 23 7 23 7zM9.75 14.57V8.43l5.4 3.07-5.4 3.07z"/></svg>
+                </a>
+                <a href="#" aria-label="Twitter" class="social-icon twitter">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.29 3.9A12.14 12.14 0 013 4.79a4.28 4.28 0 001.32 5.72 4.22 4.22 0 01-1.94-.54v.05a4.29 4.29 0 003.43 4.2 4.29 4.29 0 01-1.93.07 4.29 4.29 0 004 2.98A8.6 8.6 0 012 19.54 12.13 12.13 0 008.56 21c7.87 0 12.17-6.52 12.17-12.17 0-.18 0-.36-.01-.53A8.7 8.7 0 0024 5.1a8.48 8.48 0 01-2.54.7z"/></svg>
+                </a>
+            </div>
         </div>
     </footer>
+
     <script>
         (function() {
             var dds = document.querySelectorAll('.has-dd');
@@ -900,7 +897,6 @@
                         d.classList.remove('open');
                     });
                     if (!isOpen) el.classList.add('open');
-                    
                 });
             });
             document.addEventListener('click', function(e) {
@@ -911,7 +907,6 @@
         })();
     </script>
     <script>
-        // Mobile nav
         (function() {
             var burger = document.getElementById('navBurger');
             var mobNav = document.getElementById('mobNav');
@@ -926,11 +921,13 @@
                 document.body.style.overflow = 'hidden';
                 burger.classList.add('open');
             }
+
             function closeNav() {
                 mobNav.classList.remove('open');
                 document.body.style.overflow = '';
                 burger.classList.remove('open');
             }
+
             if (burger) burger.addEventListener('click', openNav);
             if (mobClose) mobClose.addEventListener('click', closeNav);
             if (mobBackdrop) mobBackdrop.addEventListener('click', closeNav);
@@ -941,7 +938,6 @@
                 });
             }
         })();
-
     </script>
 </body>
 
