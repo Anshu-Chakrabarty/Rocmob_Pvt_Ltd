@@ -1,554 +1,1755 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Services – Performance Marketing, SEO, Social Media — Rocmob Performance Limited</title>
-    <link rel="stylesheet" href="_shared.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Services – Performance Marketing, SEO, Social Media — Rocmob Performance
+      Limited
+    </title>
+    <link rel="stylesheet" href="_shared.css" />
     <style>
-        .svc-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 56px;
-            align-items: start;
-            padding: 60px 0;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .svc-row:last-child {
-            border-bottom: none;
-        }
-        
-        .svc-row.flip {
-            direction: rtl;
-        }
-        
-        .svc-row.flip>* {
-            direction: ltr;
-        }
-        
-        .svc-vis {
-            background: var(--blue-xpale);
-            border-radius: var(--r-xl);
-            padding: 36px;
-        }
-        
-        .feat {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            font-size: 13.5px;
-            color: var(--mid);
-            margin-bottom: 9px;
-        }
-        
-        .feat::before {
-            content: "✓";
-            width: 18px;
-            height: 18px;
-            background: var(--blue);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            font-weight: 700;
-            color: #fff;
-            flex-shrink: 0;
-        }
-        
-        .proc-g {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin-top: 32px;
-        }
-        
-        .proc {
-            background: var(--blue-xpale);
-            border-radius: var(--r);
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .proc-n {
-            font-family: 'Bricolage Grotesque', sans-serif;
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--blue);
-            margin-bottom: 8px;
-        }
-        
-        .proc h5 {
-            font-family: 'Bricolage Grotesque', sans-serif;
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--blue-dk);
-            margin-bottom: 4px;
-        }
-        
-        .proc p {
-            font-size: 12px;
-            color: var(--muted);
-            line-height: 1.55;
-        }
-        
-        @media(max-width:768px) {
-            .svc-row,
-            .svc-row.flip {
-                grid-template-columns: 1fr;
-                direction: ltr;
-            }
-            .proc-g {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-    </style>
-</head>
+      .svc-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 56px;
+        align-items: start;
+        padding: 60px 0;
+        border-bottom: 1px solid var(--border);
+      }
 
-<body>
+      .svc-row:last-child {
+        border-bottom: none;
+      }
+
+      .svc-row.flip {
+        direction: rtl;
+      }
+
+      .svc-row.flip > * {
+        direction: ltr;
+      }
+
+      .svc-vis {
+        background: var(--blue-xpale);
+        border-radius: var(--r-xl);
+        padding: 36px;
+      }
+
+      .feat {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 13.5px;
+        color: var(--mid);
+        margin-bottom: 9px;
+      }
+
+      .feat::before {
+        content: "✓";
+        width: 18px;
+        height: 18px;
+        background: var(--blue);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        font-weight: 700;
+        color: #fff;
+        flex-shrink: 0;
+      }
+
+      .proc-g {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+      }
+
+      .proc {
+        background: var(--blue-xpale);
+        border-radius: var(--r);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .proc-n {
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--blue);
+        margin-bottom: 8px;
+      }
+
+      .proc h5 {
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--blue-dk);
+        margin-bottom: 4px;
+      }
+
+      .proc p {
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      @media (max-width: 768px) {
+        .svc-row,
+        .svc-row.flip {
+          grid-template-columns: 1fr;
+          direction: ltr;
+        }
+        .proc-g {
+          grid-template-columns: 1fr 1fr;
+        }
+        .svc-vis { padding: 24px; }
+      }
+
+      @media (max-width: 480px) {
+        .proc-g { grid-template-columns: 1fr; }
+        .svc-row { padding: 40px 0; }
+      }
+    </style>
+  </head>
+
+  <body>
     <div class="ticker">
-        <div class="tk-track"><span class="tk-item">Performance Marketing</span><span class="tk-item">SEO &amp; SEM</span><span class="tk-item">Paid Media</span><span class="tk-item">Social Media Marketing</span><span class="tk-item">Influencer Marketing</span><span class="tk-item">Brand Strategy</span>
-            <span class="tk-item">Lead Generation</span><span class="tk-item">Email &amp; CRM</span><span class="tk-item">Content Marketing</span><span class="tk-item">Conversion Optimisation</span><span class="tk-item">Google Ads</span><span class="tk-item">Meta Advertising</span>
-            <span class="tk-item">Performance Marketing</span><span class="tk-item">SEO &amp; SEM</span><span class="tk-item">Paid Media</span><span class="tk-item">Social Media Marketing</span><span class="tk-item">Influencer Marketing</span><span class="tk-item">Brand Strategy</span>
-            <span class="tk-item">Lead Generation</span><span class="tk-item">Email &amp; CRM</span><span class="tk-item">Content Marketing</span><span class="tk-item">Conversion Optimisation</span><span class="tk-item">Google Ads</span><span class="tk-item">Meta Advertising</span></div>
+      <div class="tk-track">
+        <span class="tk-item">Performance Marketing</span
+        ><span class="tk-item">SEO &amp; SEM</span
+        ><span class="tk-item">Paid Media</span
+        ><span class="tk-item">Social Media Marketing</span
+        ><span class="tk-item">Influencer Marketing</span
+        ><span class="tk-item">Brand Strategy</span>
+        <span class="tk-item">Lead Generation</span
+        ><span class="tk-item">Email &amp; CRM</span
+        ><span class="tk-item">Content Marketing</span
+        ><span class="tk-item">Conversion Optimisation</span
+        ><span class="tk-item">Google Ads</span
+        ><span class="tk-item">Meta Advertising</span>
+        <span class="tk-item">Performance Marketing</span
+        ><span class="tk-item">SEO &amp; SEM</span
+        ><span class="tk-item">Paid Media</span
+        ><span class="tk-item">Social Media Marketing</span
+        ><span class="tk-item">Influencer Marketing</span
+        ><span class="tk-item">Brand Strategy</span>
+        <span class="tk-item">Lead Generation</span
+        ><span class="tk-item">Email &amp; CRM</span
+        ><span class="tk-item">Content Marketing</span
+        ><span class="tk-item">Conversion Optimisation</span
+        ><span class="tk-item">Google Ads</span
+        ><span class="tk-item">Meta Advertising</span>
+      </div>
     </div>
     <div class="topbar">
-        <div class="topbar-l">
-            <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> CSL 0513 Ecocentre, Sector V, Bidhannagar, Kolkata 700091</span>
-            <span class="sep">|</span><a href="mailto:sales@rocmob.com">sales@rocmob.com</a>
-        </div>
-        <div class="topbar-r">
-            <a href="tel:03346049461">03346049461</a>
-            <span class="sep">|</span><a href="#">LinkedIn</a><a href="#">Instagram</a>
-        </div>
+      <div class="topbar-l">
+        <a
+          href="https://maps.app.goo.gl/XQaKYKdHNQYxbWKZ6"
+          target="_blank"
+          rel="noopener"
+          style="display: flex; align-items: center; gap: 6px"
+          ><svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="flex-shrink: 0"
+          >
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          CSL 0513 Ecocentre, Sector V, Bidhannagar, Kolkata 700091</a
+        >
+        <span class="sep">|</span
+        ><a
+          href="mailto:sales@rocmob.com"
+          style="display: flex; align-items: center; gap: 5px"
+          ><svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="flex-shrink: 0"
+          >
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            />
+            <polyline points="22,6 12,13 2,6" /></svg
+          >sales@rocmob.com</a
+        >
+      </div>
+      <div class="topbar-r">
+        <a
+          href="tel:03346049461"
+          style="display: flex; align-items: center; gap: 5px"
+          ><svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="flex-shrink: 0"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.09 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+            /></svg
+          >03346049461</a
+        >
+        <span class="sep">|</span><a href="#">LinkedIn</a
+        ><a href="#">Instagram</a>
+      </div>
     </div>
     <header>
-        <div class="hdr-inner">
-            <a href="index.html" style="display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0;">
-                <img src="rocmob logo.png" alt="Rocmob Logo" class="nav-logo">
-            </a>
-  <!-- R: vertical stem + bowl + diagonal leg -->
-  <rect x="2" y="4" width="6" height="36" fill="#1B6FBE"/>
-  <path d="M8 4 H22 C27 4 31 8 31 14 C31 19 28 23 23 24 L31 40 H24 L17 25 H8 V40 H2 V4Z M8 10 V20 H21 C24 20 25 18 25 14 C25 11 23 10 21 10Z" fill="#1B6FBE"/>
-  <!-- diagonal leg of R cuts across -->
-  <polygon points="17,25 24,25 32,40 25,40" fill="#1B6FBE"/>
-  <!-- M: two peaks -->
-  <polygon points="34,4 34,40 40,40 40,16 47,28 54,16 54,40 60,40 60,4 54,4 47,18 40,4" fill="#1B6FBE"/>
-</svg>
-                <div style="display:flex;flex-direction:column;line-height:1;">
-                    <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:17px;font-weight:700;color:#0D3560;letter-spacing:0.08em;">ROCMOB</span>
-                    <span style="font-size:9.5px;font-weight:500;color:#6b7f96;letter-spacing:0.09em;text-transform:uppercase;margin-top:2px;">Performance Limited · India</span>
+      <div class="hdr-inner">
+        <a
+          href="index.html"
+          style="
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            text-decoration: none;
+            flex-shrink: 0;
+          "
+        >
+          <img src="rocmob logo.png" alt="Rocmob Logo" class="nav-logo" />
+        </a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="has-dd">
+              <a href="services.html">Services</a>
+              <div class="dd">
+                <div class="dd-inner">
+                  <a href="services.html#perf"
+                    ><span class="dd-ico"
+                      ><svg viewBox="0 0 24 24">
+                        <polyline
+                          points="22 12 18 12 15 21 9 3 6 12 2 12"
+                        /></svg></span
+                    >Performance Marketing</a
+                  >
+                  <a href="services.html#seo"
+                    ><span class="dd-ico"
+                      ><svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8" />
+                        <line
+                          x1="21"
+                          y1="21"
+                          x2="16.65"
+                          y2="16.65"
+                        /></svg></span
+                    >SEO &amp; Search</a
+                  >
+                  <a href="services.html#social"
+                    ><span class="dd-ico"
+                      ><svg viewBox="0 0 24 24">
+                        <path
+                          d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                        /></svg></span
+                    >Social Media</a
+                  >
+                  <a href="services.html#influencer"
+                    ><span class="dd-ico"
+                      ><svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                        <path d="M16 3.13a4 4 0 010 7.75" /></svg></span
+                    >Influencer Marketing</a
+                  >
+                  <a href="services.html#email"
+                    ><span class="dd-ico"
+                      ><svg viewBox="0 0 24 24">
+                        <path
+                          d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                        />
+                        <polyline points="22,6 12,13 2,6" /></svg></span
+                    >Email &amp; CRM</a
+                  >
+                  <a href="services.html#content"
+                    ><span class="dd-ico"
+                      ><svg viewBox="0 0 24 24">
+                        <path
+                          d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+                        />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10 9 9 9 8 9" /></svg></span
+                    >Content Strategy</a
+                  >
                 </div>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="has-dd"><a href="services.html">Services</a>
-                        <div class="dd">
-                            <div class="dd-inner">
-                                <a href="services.html#perf"><span class="dd-ico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>Performance Marketing</a>
-                                <a href="services.html#seo"><span class="dd-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>SEO &amp; Search</a>
-                                <a href="services.html#social"><span class="dd-ico"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></span>Social Media</a>
-                                <a href="services.html#influencer"><span class="dd-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>Influencer Marketing</a>
-                                <a href="services.html#email"><span class="dd-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>Email &amp; CRM</a>
-                                <a href="services.html#content"><span class="dd-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>Content Strategy</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="industries.html">Industries</a></li>
-                    <li><a href="blog.html">Insights</a></li>
-                    <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
-                </ul>
-            </nav>
-        </div>
+              </div>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="blog.html">Insights</a></li>
+            <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+          </ul>
+        </nav>
+            <button class="nav-burger" id="navBurger" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+      </div>
     </header>
+    <!-- Mobile Nav Overlay -->
+    <div class="mob-nav" id="mobNav">
+        <div class="mob-backdrop" id="mobBackdrop"></div>
+        <div class="mob-drawer">
+            <div class="mob-hdr">
+                <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+                    <img src="rocmob logo.png" alt="Rocmob" class="nav-logo" style="height:34px;">
+                </a>
+                <button class="mob-close" id="mobClose" aria-label="Close menu">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+            <div class="mob-links">
+                <a href="index.html">Home</a>
+                <div class="mob-parent" id="mobSvcToggle">
+                    Services
+                    <svg class="mob-chevron" id="mobSvcChevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="mob-sub" id="mobSvcSub">
+                    <a href="services.html#perf"><span class="dd-ico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>Performance Marketing</a>
+                    <a href="services.html#seo"><span class="dd-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>SEO &amp; Search</a>
+                    <a href="services.html#social"><span class="dd-ico"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></span>Social Media</a>
+                    <a href="services.html#influencer"><span class="dd-ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>Influencer Marketing</a>
+                    <a href="services.html#email"><span class="dd-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>Email &amp; CRM</a>
+                    <a href="services.html#content"><span class="dd-ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>Content Strategy</a>
+                </div>
+                <div class="mob-divider"></div>
+                <a href="about.html">About Us</a>
+                <a href="industries.html">Industries</a>
+                <a href="blog.html">Insights</a>
+                <div class="mob-divider"></div>
+                <a href="contact.html" style="background:var(--blue);color:#fff;font-weight:600;justify-content:center;">Get In Touch →</a>
+            </div>
+            <div class="mob-foot">
+                <div class="mob-contact">
+                    <a href="mailto:sales@rocmob.com">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        sales@rocmob.com
+                    </a>
+                    <a href="tel:03346049461">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.1 1.18 2 2 0 012.09 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        033 4604 9461
+                    </a>
+                </div>
+                <p style="font-size:11.5px;color:var(--muted);">Mon–Fri 9:30 AM–6:30 PM IST</p>
+            </div>
+        </div>
+    </div>
+
 
     <section class="pg-hero">
-        <div class="wrap" style="position:relative;z-index:1;">
-            <div class="bc"><a href="index.html">Home</a><span class="bc-sep">/</span><span>Services</span></div>
-            <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(34px,5vw,52px);font-weight:800;color:#fff;margin-bottom:14px;letter-spacing:-.02em;">Our Services</h1>
-            <p style="font-size:17px;color:rgba(255,255,255,0.65);max-width:580px;line-height:1.7;">End-to-end digital marketing services engineered for measurable, scalable growth — from strategy through execution, we own your results.</p>
+      <div class="wrap" style="position: relative; z-index: 1">
+        <div class="bc">
+          <a href="index.html">Home</a><span class="bc-sep">/</span
+          ><span>Services</span>
         </div>
+        <h1
+          style="
+            font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+            font-size: clamp(34px, 5vw, 52px);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 14px;
+            letter-spacing: -0.02em;
+          "
+        >
+          Our Services
+        </h1>
+        <p
+          style="
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.65);
+            max-width: 580px;
+            line-height: 1.7;
+          "
+        >
+          End-to-end digital marketing services engineered for measurable,
+          scalable growth — from strategy through execution, we own your
+          results.
+        </p>
+      </div>
     </section>
 
     <div class="stats-bar">
-        <div class="stats-inner">
-            <div class="stat">
-                <div class="stat-n">6<span class="stat-u">+</span></div>
-                <div class="stat-l">Service Lines</div>
-            </div>
-            <div class="stat">
-                <div class="stat-n">500<span class="stat-u">+</span></div>
-                <div class="stat-l">Campaigns Managed</div>
-            </div>
-            <div class="stat">
-                <div class="stat-n">3.8<span class="stat-u">×</span></div>
-                <div class="stat-l">Average ROAS</div>
-            </div>
-            <div class="stat">
-                <div class="stat-n">98<span class="stat-u">%</span></div>
-                <div class="stat-l">Client Satisfaction</div>
-            </div>
+      <div class="stats-inner">
+        <div class="stat">
+          <div class="stat-n">6<span class="stat-u">+</span></div>
+          <div class="stat-l">Service Lines</div>
         </div>
+        <div class="stat">
+          <div class="stat-n">500<span class="stat-u">+</span></div>
+          <div class="stat-l">Campaigns Managed</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">3.8<span class="stat-u">×</span></div>
+          <div class="stat-l">Average ROAS</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">98<span class="stat-u">%</span></div>
+          <div class="stat-l">Client Satisfaction</div>
+        </div>
+      </div>
     </div>
 
     <section class="sec">
-        <div class="wrap">
-
-            <div id="perf" class="svc-row">
-                <div>
-                    <span class="lbl">Service 01</span>
-                    <h2 class="hd">Performance <span>Marketing</span></h2>
-                    <p style="font-size:15.5px;color:var(--muted);line-height:1.75;margin-bottom:20px;">ROI-driven paid media across Google, Meta, and programmatic networks. We don't spend your budget — we invest it where it delivers maximum measurable return.</p>
-                    <div class="feat">Google Search, Display &amp; Shopping Ads</div>
-                    <div class="feat">Meta (Facebook &amp; Instagram) Advertising</div>
-                    <div class="feat">Programmatic &amp; Display Networks</div>
-                    <div class="feat">YouTube &amp; Video Advertising</div>
-                    <div class="feat">Real-Time Bidding &amp; Budget Optimisation</div>
-                    <div class="feat">Attribution Modelling &amp; Transparent Reporting</div>
-                    <div style="margin-top:24px;"><a href="contact.html" class="btn btn-primary">Get a Free Audit →</a></div>
-                </div>
-                <div class="svc-vis">
-                    <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:12px;font-weight:700;color:var(--blue);margin-bottom:16px;letter-spacing:.06em;text-transform:uppercase;">Campaign Performance</div>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
-                        <div style="background:#fff;border-radius:var(--r);padding:16px;border:1px solid var(--border);text-align:center;">
-                            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:800;color:var(--blue);">4.2×</div>
-                            <div style="font-size:11px;color:var(--muted);">ROAS</div>
-                        </div>
-                        <div style="background:var(--blue);border-radius:var(--r);padding:16px;text-align:center;">
-                            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:800;color:#fff;">−38%</div>
-                            <div style="font-size:11px;color:rgba(255,255,255,0.7);">Cost Per Lead</div>
-                        </div>
-                    </div>
-                    <div style="background:#fff;border-radius:var(--r);padding:16px;border:1px solid var(--border);">
-                        <div style="font-size:11.5px;color:var(--muted);margin-bottom:10px;">Monthly Conversion Growth</div>
-                        <div style="display:flex;align-items:flex-end;gap:5px;height:56px;">
-                            <div style="flex:1;background:var(--blue-pale);border-radius:2px 2px 0 0;height:30%"></div>
-                            <div style="flex:1;background:var(--blue-pale);border-radius:2px 2px 0 0;height:42%"></div>
-                            <div style="flex:1;background:var(--blue-pale);border-radius:2px 2px 0 0;height:55%"></div>
-                            <div style="flex:1;background:var(--blue);border-radius:2px 2px 0 0;height:64%"></div>
-                            <div style="flex:1;background:var(--blue);border-radius:2px 2px 0 0;height:76%"></div>
-                            <div style="flex:1;background:var(--blue);border-radius:2px 2px 0 0;height:88%"></div>
-                            <div style="flex:1;background:var(--blue-dk);border-radius:2px 2px 0 0;height:100%"></div>
-                        </div>
-                    </div>
-                </div>
+      <div class="wrap">
+        <div id="perf" class="svc-row">
+          <div>
+            <span class="lbl">Service 01</span>
+            <h2 class="hd">Performance <span>Marketing</span></h2>
+            <p
+              style="
+                font-size: 15.5px;
+                color: var(--muted);
+                line-height: 1.75;
+                margin-bottom: 20px;
+              "
+            >
+              ROI-driven paid media across Google, Meta, and programmatic
+              networks. We don't spend your budget — we invest it where it
+              delivers maximum measurable return.
+            </p>
+            <div class="feat">Google Search, Display &amp; Shopping Ads</div>
+            <div class="feat">Meta (Facebook &amp; Instagram) Advertising</div>
+            <div class="feat">Programmatic &amp; Display Networks</div>
+            <div class="feat">YouTube &amp; Video Advertising</div>
+            <div class="feat">Real-Time Bidding &amp; Budget Optimisation</div>
+            <div class="feat">
+              Attribution Modelling &amp; Transparent Reporting
             </div>
-
-            <div id="seo" class="svc-row flip">
-                <div class="svc-vis">
-                    <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:12px;font-weight:700;color:var(--blue);margin-bottom:16px;letter-spacing:.06em;text-transform:uppercase;">SEO Dashboard</div>
-                    <div style="background:#fff;border-radius:var(--r);padding:14px;border:1px solid var(--border);margin-bottom:10px;">
-                        <div style="font-size:11.5px;color:var(--muted);margin-bottom:8px;">Keyword Rankings</div>
-                        <div style="display:flex;flex-direction:column;gap:7px;">
-                            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;"><span style="color:var(--mid);">digital marketing kolkata</span><span style="background:#dcfce7;color:#16a34a;padding:2px 8px;border-radius:100px;font-size:10.5px;font-weight:700;">#1</span></div>
-                            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;"><span style="color:var(--mid);">performance agency india</span><span style="background:var(--blue-pale);color:var(--blue);padding:2px 8px;border-radius:100px;font-size:10.5px;font-weight:700;">#3</span></div>
-                            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;"><span style="color:var(--mid);">seo services west bengal</span><span style="background:var(--blue-pale);color:var(--blue);padding:2px 8px;border-radius:100px;font-size:10.5px;font-weight:700;">#2</span></div>
-                        </div>
-                    </div>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                        <div style="background:#fff;border-radius:var(--r);padding:14px;border:1px solid var(--border);text-align:center;">
-                            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;color:var(--blue);">+87%</div>
-                            <div style="font-size:11px;color:var(--muted);">Organic Traffic</div>
-                        </div>
-                        <div style="background:#fff;border-radius:var(--r);padding:14px;border:1px solid var(--border);text-align:center;">
-                            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;color:var(--blue);">12K+</div>
-                            <div style="font-size:11px;color:var(--muted);">Keywords Ranked</div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <span class="lbl">Service 02</span>
-                    <h2 class="hd">SEO &amp; <span>Search Marketing</span></h2>
-                    <p style="font-size:15.5px;color:var(--muted);line-height:1.75;margin-bottom:20px;">Comprehensive SEO and paid search strategies that put your brand in front of buyers at the exact moment they're searching — building authority that compounds over time.</p>
-                    <div class="feat">Technical SEO Audits &amp; Implementation</div>
-                    <div class="feat">On-Page &amp; Content Optimisation</div>
-                    <div class="feat">Link Building &amp; Domain Authority</div>
-                    <div class="feat">Local SEO for Indian Markets</div>
-                    <div class="feat">Google Search Ads (SEM)</div>
-                    <div class="feat">Monthly Rank Tracking &amp; Analytics</div>
-                    <div style="margin-top:24px;"><a href="contact.html" class="btn btn-primary">Get an SEO Audit →</a></div>
-                </div>
+            <div style="margin-top: 24px">
+              <a href="contact.html" class="btn btn-primary"
+                >Get a Free Audit →</a
+              >
             </div>
-
-            <div id="social" class="svc-row">
-                <div>
-                    <span class="lbl">Service 03</span>
-                    <h2 class="hd">Social Media <span>Marketing</span></h2>
-                    <p style="font-size:15.5px;color:var(--muted);line-height:1.75;margin-bottom:20px;">Build a powerful social presence that drives brand awareness, community, and sales — we manage everything from organic content to paid campaigns and creative production.</p>
-                    <div class="feat">Instagram, LinkedIn &amp; YouTube Strategy</div>
-                    <div class="feat">Paid Social Campaign Management</div>
-                    <div class="feat">Content Creation &amp; Creative Direction</div>
-                    <div class="feat">Community Management &amp; Engagement</div>
-                    <div class="feat">Reels, Shorts &amp; Video Production</div>
-                    <div class="feat">Social Commerce Integration</div>
-                    <div style="margin-top:24px;"><a href="contact.html" class="btn btn-primary">Grow Your Social →</a></div>
-                </div>
-                <div class="svc-vis">
-                    <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:12px;font-weight:700;color:var(--blue);margin-bottom:14px;letter-spacing:.06em;text-transform:uppercase;">Platform Growth</div>
-                    <div style="display:flex;flex-direction:column;gap:9px;">
-                        <div style="display:flex;align-items:center;gap:10px;background:#fff;border-radius:var(--r);padding:13px 15px;border:1px solid var(--border);">
-                            <span style="color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span>
-                            <div style="flex:1;">
-                                <div style="font-size:12.5px;font-weight:700;color:var(--blue-dk);">Instagram</div>
-                                <div style="font-size:11px;color:var(--muted);">+3.2K followers this month</div>
-                            </div>
-                            <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;color:#16a34a;font-size:13px;">↑78%</div>
-                        </div>
-                        <div style="display:flex;align-items:center;gap:10px;background:#fff;border-radius:var(--r);padding:13px 15px;border:1px solid var(--border);">
-                            <span style="color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
-                            <div style="flex:1;">
-                                <div style="font-size:12.5px;font-weight:700;color:var(--blue-dk);">LinkedIn</div>
-                                <div style="font-size:11px;color:var(--muted);">+890 company page followers</div>
-                            </div>
-                            <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;color:#16a34a;font-size:13px;">↑45%</div>
-                        </div>
-                        <div style="display:flex;align-items:center;gap:10px;background:#fff;border-radius:var(--r);padding:13px 15px;border:1px solid var(--border);">
-                            <span style="color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span>
-                            <div style="flex:1;">
-                                <div style="font-size:12.5px;font-weight:700;color:var(--blue-dk);">YouTube</div>
-                                <div style="font-size:11px;color:var(--muted);">2.1M impressions · 64K views</div>
-                            </div>
-                            <div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;color:#16a34a;font-size:13px;">↑92%</div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="svc-vis">
+            <div
+              style="
+                font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                font-size: 12px;
+                font-weight: 700;
+                color: var(--blue);
+                margin-bottom: 16px;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+              "
+            >
+              Campaign Performance
             </div>
-
-            <div id="influencer" class="svc-row flip">
-                <div class="svc-vis">
-                    <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:12px;font-weight:700;color:var(--blue);margin-bottom:14px;letter-spacing:.06em;text-transform:uppercase;">Influencer Network</div>
-                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px;">
-                        <div style="background:#fff;border-radius:var(--r);padding:12px;border:1px solid var(--border);text-align:center;">
-                            <div style="color:#fff;margin-bottom:6px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-                            <div style="font-size:10px;font-weight:700;color:var(--blue);">Mega</div>
-                            <div style="font-size:10px;color:var(--muted);">1M+</div>
-                        </div>
-                        <div style="background:var(--blue);border-radius:var(--r);padding:12px;text-align:center;">
-                            <div style="color:#fff;margin-bottom:6px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-                            <div style="font-size:10px;font-weight:700;color:#fff;">Macro</div>
-                            <div style="font-size:10px;color:rgba(255,255,255,0.65);">100K+</div>
-                        </div>
-                        <div style="background:#fff;border-radius:var(--r);padding:12px;border:1px solid var(--border);text-align:center;">
-                            <div style="font-size:16px;margin-bottom:3px;" style="color:var(--blue);display:block;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-                            <div style="font-size:10px;font-weight:700;color:var(--blue);">Micro</div>
-                            <div style="font-size:10px;color:var(--muted);">10K+</div>
-                        </div>
-                    </div>
-                    <div style="background:#fff;border-radius:var(--r);padding:14px;border:1px solid var(--border);text-align:center;">
-                        <div style="font-size:11px;color:var(--muted);margin-bottom:4px;">Combined Audience Reach</div>
-                        <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:28px;font-weight:800;color:var(--blue);">50M+</div>
-                    </div>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                margin-bottom: 12px;
+              "
+            >
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 16px;
+                  border: 1px solid var(--border);
+                  text-align: center;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                    font-size: 24px;
+                    font-weight: 800;
+                    color: var(--blue);
+                  "
+                >
+                  4.2×
                 </div>
-                <div>
-                    <span class="lbl">Service 04</span>
-                    <h2 class="hd">Influencer <span>Marketing</span></h2>
-                    <p style="font-size:15.5px;color:var(--muted);line-height:1.75;margin-bottom:20px;">Strategic partnerships with India's top content creators — identification, outreach, briefing, execution, and full attribution handled end-to-end.</p>
-                    <div class="feat">Influencer Research &amp; Vetting</div>
-                    <div class="feat">Campaign Strategy &amp; Creative Briefing</div>
-                    <div class="feat">Contract Negotiation &amp; Management</div>
-                    <div class="feat">Instagram, YouTube &amp; Podcast Creators</div>
-                    <div class="feat">Performance Tracking &amp; Attribution</div>
-                    <div class="feat">UGC Content Strategy &amp; Repurposing</div>
-                    <div style="margin-top:24px;"><a href="contact.html" class="btn btn-primary">Explore Influencer Campaigns →</a></div>
+                <div style="font-size: 11px; color: var(--muted)">ROAS</div>
+              </div>
+              <div
+                style="
+                  background: var(--blue);
+                  border-radius: var(--r);
+                  padding: 16px;
+                  text-align: center;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                    font-size: 24px;
+                    font-weight: 800;
+                    color: #fff;
+                  "
+                >
+                  −38%
                 </div>
+                <div style="font-size: 11px; color: rgba(255, 255, 255, 0.7)">
+                  Cost Per Lead
+                </div>
+              </div>
             </div>
-
-            <div id="email" class="svc-row">
-                <div>
-                    <span class="lbl">Service 05</span>
-                    <h2 class="hd">Email &amp; <span>CRM Automation</span></h2>
-                    <p style="font-size:15.5px;color:var(--muted);line-height:1.75;margin-bottom:20px;">Precision nurture flows and CRM automation that turn qualified leads into loyal, high-value customers — the highest-ROI channel in digital marketing.</p>
-                    <div class="feat">Welcome &amp; Onboarding Sequences</div>
-                    <div class="feat">Lead Nurture &amp; Drip Campaigns</div>
-                    <div class="feat">Cart Abandonment &amp; Re-engagement</div>
-                    <div class="feat">CRM Setup &amp; Integration</div>
-                    <div class="feat">A/B Testing &amp; Deliverability Optimisation</div>
-                    <div class="feat">Lifecycle Marketing Strategy</div>
-                    <div style="margin-top:24px;"><a href="contact.html" class="btn btn-primary">Set Up Email Automation →</a></div>
-                </div>
-                <div class="svc-vis">
-                    <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:12px;font-weight:700;color:var(--blue);margin-bottom:14px;letter-spacing:.06em;text-transform:uppercase;">Email Performance</div>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-                        <div style="background:#fff;border-radius:var(--r);padding:14px;border:1px solid var(--border);text-align:center;">
-                            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;color:var(--blue);">42×</div>
-                            <div style="font-size:11px;color:var(--muted);">Avg. ROI</div>
-                        </div>
-                        <div style="background:#fff;border-radius:var(--r);padding:14px;border:1px solid var(--border);text-align:center;">
-                            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;color:var(--blue);">28%</div>
-                            <div style="font-size:11px;color:var(--muted);">Open Rate</div>
-                        </div>
-                        <div style="background:var(--blue);border-radius:var(--r);padding:14px;text-align:center;">
-                            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;color:#fff;">4.2%</div>
-                            <div style="font-size:11px;color:rgba(255,255,255,0.7);">Click Rate</div>
-                        </div>
-                        <div style="background:#fff;border-radius:var(--r);padding:14px;border:1px solid var(--border);text-align:center;">
-                            <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;color:var(--blue);">-62%</div>
-                            <div style="font-size:11px;color:var(--muted);">Churn Rate</div>
-                        </div>
-                    </div>
-                </div>
+            <div
+              style="
+                background: #fff;
+                border-radius: var(--r);
+                padding: 16px;
+                border: 1px solid var(--border);
+              "
+            >
+              <div
+                style="
+                  font-size: 11.5px;
+                  color: var(--muted);
+                  margin-bottom: 10px;
+                "
+              >
+                Monthly Conversion Growth
+              </div>
+              <div
+                style="
+                  display: flex;
+                  align-items: flex-end;
+                  gap: 5px;
+                  height: 56px;
+                "
+              >
+                <div
+                  style="
+                    flex: 1;
+                    background: var(--blue-pale);
+                    border-radius: 2px 2px 0 0;
+                    height: 30%;
+                  "
+                ></div>
+                <div
+                  style="
+                    flex: 1;
+                    background: var(--blue-pale);
+                    border-radius: 2px 2px 0 0;
+                    height: 42%;
+                  "
+                ></div>
+                <div
+                  style="
+                    flex: 1;
+                    background: var(--blue-pale);
+                    border-radius: 2px 2px 0 0;
+                    height: 55%;
+                  "
+                ></div>
+                <div
+                  style="
+                    flex: 1;
+                    background: var(--blue);
+                    border-radius: 2px 2px 0 0;
+                    height: 64%;
+                  "
+                ></div>
+                <div
+                  style="
+                    flex: 1;
+                    background: var(--blue);
+                    border-radius: 2px 2px 0 0;
+                    height: 76%;
+                  "
+                ></div>
+                <div
+                  style="
+                    flex: 1;
+                    background: var(--blue);
+                    border-radius: 2px 2px 0 0;
+                    height: 88%;
+                  "
+                ></div>
+                <div
+                  style="
+                    flex: 1;
+                    background: var(--blue-dk);
+                    border-radius: 2px 2px 0 0;
+                    height: 100%;
+                  "
+                ></div>
+              </div>
             </div>
-
-            <div id="content" class="svc-row flip" style="border-bottom:none;">
-                <div class="svc-vis">
-                    <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:12px;font-weight:700;color:var(--blue);margin-bottom:14px;letter-spacing:.06em;text-transform:uppercase;">Content Pipeline</div>
-                    <div style="display:flex;flex-direction:column;gap:8px;">
-                        <div style="background:#fff;border-radius:var(--r);padding:12px 14px;border:1px solid var(--border);display:flex;align-items:center;gap:10px;"><span style="color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span>
-                            <span style="font-size:13px;color:var(--mid);">Blog &amp; Long-Form Articles</span><span style="margin-left:auto;font-size:11px;background:var(--blue-pale);color:var(--blue);padding:2px 8px;border-radius:100px;font-weight:600;">Live</span></div>
-                        <div style="background:#fff;border-radius:var(--r);padding:12px 14px;border:1px solid var(--border);display:flex;align-items:center;gap:10px;"><span style="color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span>
-                            <span style="font-size:13px;color:var(--mid);">Video Scripts &amp; Storyboards</span><span style="margin-left:auto;font-size:11px;background:var(--blue-pale);color:var(--blue);padding:2px 8px;border-radius:100px;font-weight:600;">Live</span></div>
-                        <div style="background:#fff;border-radius:var(--r);padding:12px 14px;border:1px solid var(--border);display:flex;align-items:center;gap:10px;"><span style="color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>
-                            <span style="font-size:13px;color:var(--mid);">Infographics &amp; Case Studies</span><span style="margin-left:auto;font-size:11px;background:#fef9c3;color:#854d0e;padding:2px 8px;border-radius:100px;font-weight:600;">In Review</span></div>
-                        <div style="background:#fff;border-radius:var(--r);padding:12px 14px;border:1px solid var(--border);display:flex;align-items:center;gap:10px;"><span style="color:var(--blue);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
-                            <span style="font-size:13px;color:var(--mid);">Email Newsletters</span><span style="margin-left:auto;font-size:11px;background:#dcfce7;color:#166534;padding:2px 8px;border-radius:100px;font-weight:600;">Published</span></div>
-                    </div>
-                </div>
-                <div>
-                    <span class="lbl">Service 06</span>
-                    <h2 class="hd">Content &amp; <span>Brand Strategy</span></h2>
-                    <p style="font-size:15.5px;color:var(--muted);line-height:1.75;margin-bottom:20px;">Purpose-built content strategy and brand storytelling that resonates with Indian audiences — building authority, trust, and preference at every stage of the buyer journey.</p>
-                    <div class="feat">Brand Positioning &amp; Messaging</div>
-                    <div class="feat">Content Strategy &amp; Editorial Calendar</div>
-                    <div class="feat">Blog, Video &amp; Podcast Production</div>
-                    <div class="feat">Thought Leadership Campaigns</div>
-                    <div class="feat">Vernacular &amp; Regional Content</div>
-                    <div class="feat">PR &amp; Media Relations</div>
-                    <div style="margin-top:24px;"><a href="contact.html" class="btn btn-primary">Build Your Content Strategy →</a></div>
-                </div>
-            </div>
-
+          </div>
         </div>
+
+        <div id="seo" class="svc-row flip">
+          <div class="svc-vis">
+            <div
+              style="
+                font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                font-size: 12px;
+                font-weight: 700;
+                color: var(--blue);
+                margin-bottom: 16px;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+              "
+            >
+              SEO Dashboard
+            </div>
+            <div
+              style="
+                background: #fff;
+                border-radius: var(--r);
+                padding: 14px;
+                border: 1px solid var(--border);
+                margin-bottom: 10px;
+              "
+            >
+              <div
+                style="
+                  font-size: 11.5px;
+                  color: var(--muted);
+                  margin-bottom: 8px;
+                "
+              >
+                Keyword Rankings
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 7px">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 13px;
+                  "
+                >
+                  <span style="color: var(--mid)"
+                    >digital marketing kolkata</span
+                  ><span
+                    style="
+                      background: #dcfce7;
+                      color: #16a34a;
+                      padding: 2px 8px;
+                      border-radius: 100px;
+                      font-size: 10.5px;
+                      font-weight: 700;
+                    "
+                    >#1</span
+                  >
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 13px;
+                  "
+                >
+                  <span style="color: var(--mid)">performance agency india</span
+                  ><span
+                    style="
+                      background: var(--blue-pale);
+                      color: var(--blue);
+                      padding: 2px 8px;
+                      border-radius: 100px;
+                      font-size: 10.5px;
+                      font-weight: 700;
+                    "
+                    >#3</span
+                  >
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 13px;
+                  "
+                >
+                  <span style="color: var(--mid)">seo services west bengal</span
+                  ><span
+                    style="
+                      background: var(--blue-pale);
+                      color: var(--blue);
+                      padding: 2px 8px;
+                      border-radius: 100px;
+                      font-size: 10.5px;
+                      font-weight: 700;
+                    "
+                    >#2</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px"
+            >
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 14px;
+                  border: 1px solid var(--border);
+                  text-align: center;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                    font-size: 22px;
+                    font-weight: 800;
+                    color: var(--blue);
+                  "
+                >
+                  +87%
+                </div>
+                <div style="font-size: 11px; color: var(--muted)">
+                  Organic Traffic
+                </div>
+              </div>
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 14px;
+                  border: 1px solid var(--border);
+                  text-align: center;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                    font-size: 22px;
+                    font-weight: 800;
+                    color: var(--blue);
+                  "
+                >
+                  12K+
+                </div>
+                <div style="font-size: 11px; color: var(--muted)">
+                  Keywords Ranked
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="lbl">Service 02</span>
+            <h2 class="hd">SEO &amp; <span>Search Marketing</span></h2>
+            <p
+              style="
+                font-size: 15.5px;
+                color: var(--muted);
+                line-height: 1.75;
+                margin-bottom: 20px;
+              "
+            >
+              Comprehensive SEO and paid search strategies that put your brand
+              in front of buyers at the exact moment they're searching —
+              building authority that compounds over time.
+            </p>
+            <div class="feat">Technical SEO Audits &amp; Implementation</div>
+            <div class="feat">On-Page &amp; Content Optimisation</div>
+            <div class="feat">Link Building &amp; Domain Authority</div>
+            <div class="feat">Local & International SEO</div>
+            <div class="feat">Google Search Ads (SEM)</div>
+            <div class="feat">Monthly Rank Tracking &amp; Analytics</div>
+            <div style="margin-top: 24px">
+              <a href="contact.html" class="btn btn-primary"
+                >Get an SEO Audit →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div id="social" class="svc-row">
+          <div>
+            <span class="lbl">Service 03</span>
+            <h2 class="hd">Social Media <span>Marketing</span></h2>
+            <p
+              style="
+                font-size: 15.5px;
+                color: var(--muted);
+                line-height: 1.75;
+                margin-bottom: 20px;
+              "
+            >
+              Build a powerful social presence that drives brand awareness,
+              community, and sales — we manage everything from organic content
+              to paid campaigns and creative production.
+            </p>
+            <div class="feat">Instagram, LinkedIn &amp; YouTube Strategy</div>
+            <div class="feat">Paid Social Campaign Management</div>
+            <div class="feat">Content Creation &amp; Creative Direction</div>
+            <div class="feat">Community Management &amp; Engagement</div>
+            <div class="feat">Reels, Shorts &amp; Video Production</div>
+            <div class="feat">Social Commerce Integration</div>
+            <div style="margin-top: 24px">
+              <a href="contact.html" class="btn btn-primary"
+                >Grow Your Social →</a
+              >
+            </div>
+          </div>
+          <div class="svc-vis">
+            <div
+              style="
+                font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                font-size: 12px;
+                font-weight: 700;
+                color: var(--blue);
+                margin-bottom: 14px;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+              "
+            >
+              Platform Growth
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 9px">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 13px 15px;
+                  border: 1px solid var(--border);
+                "
+              >
+                <span style="color: var(--blue)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="flex-shrink: 0"
+                  >
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                    <line x1="12" y1="18" x2="12.01" y2="18" /></svg
+                ></span>
+                <div style="flex: 1">
+                  <div
+                    style="
+                      font-size: 12.5px;
+                      font-weight: 700;
+                      color: var(--blue-dk);
+                    "
+                  >
+                    Instagram
+                  </div>
+                  <div style="font-size: 11px; color: var(--muted)">
+                    +3.2K followers this month
+                  </div>
+                </div>
+                <div
+                  style="
+                    font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                    font-weight: 800;
+                    color: #16a34a;
+                    font-size: 13px;
+                  "
+                >
+                  ↑78%
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 13px 15px;
+                  border: 1px solid var(--border);
+                "
+              >
+                <span style="color: var(--blue)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="flex-shrink: 0"
+                  >
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                    <path d="M16 3.13a4 4 0 010 7.75" /></svg
+                ></span>
+                <div style="flex: 1">
+                  <div
+                    style="
+                      font-size: 12.5px;
+                      font-weight: 700;
+                      color: var(--blue-dk);
+                    "
+                  >
+                    LinkedIn
+                  </div>
+                  <div style="font-size: 11px; color: var(--muted)">
+                    +890 company page followers
+                  </div>
+                </div>
+                <div
+                  style="
+                    font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                    font-weight: 800;
+                    color: #16a34a;
+                    font-size: 13px;
+                  "
+                >
+                  ↑45%
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 13px 15px;
+                  border: 1px solid var(--border);
+                "
+              >
+                <span style="color: var(--blue)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="flex-shrink: 0"
+                  >
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                    <polyline points="17 6 23 6 23 12" /></svg
+                ></span>
+                <div style="flex: 1">
+                  <div
+                    style="
+                      font-size: 12.5px;
+                      font-weight: 700;
+                      color: var(--blue-dk);
+                    "
+                  >
+                    YouTube
+                  </div>
+                  <div style="font-size: 11px; color: var(--muted)">
+                    2.1M impressions · 64K views
+                  </div>
+                </div>
+                <div
+                  style="
+                    font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                    font-weight: 800;
+                    color: #16a34a;
+                    font-size: 13px;
+                  "
+                >
+                  ↑92%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="influencer" class="svc-row flip">
+          <div class="svc-vis">
+            <div
+              style="
+                font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                font-size: 12px;
+                font-weight: 700;
+                color: var(--blue);
+                margin-bottom: 14px;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+              "
+            >
+              Influencer Network
+            </div>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 8px;
+                margin-bottom: 10px;
+              "
+            >
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 12px;
+                  border: 1px solid var(--border);
+                  text-align: center;
+                "
+              >
+                <div style="color: #fff; margin-bottom: 6px">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="flex-shrink: 0"
+                  >
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                    <polyline points="17 6 23 6 23 12" />
+                  </svg>
+                </div>
+                <div
+                  style="font-size: 10px; font-weight: 700; color: var(--blue)"
+                >
+                  Mega
+                </div>
+                <div style="font-size: 10px; color: var(--muted)">1M+</div>
+              </div>
+              <div
+                style="
+                  background: var(--blue);
+                  border-radius: var(--r);
+                  padding: 12px;
+                  text-align: center;
+                "
+              >
+                <div style="color: #fff; margin-bottom: 6px">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="flex-shrink: 0"
+                  >
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                    <path d="M16 3.13a4 4 0 010 7.75" />
+                  </svg>
+                </div>
+                <div style="font-size: 10px; font-weight: 700; color: #fff">
+                  Macro
+                </div>
+                <div style="font-size: 10px; color: rgba(255, 255, 255, 0.65)">
+                  100K+
+                </div>
+              </div>
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 12px;
+                  border: 1px solid var(--border);
+                  text-align: center;
+                "
+              >
+                <div
+                  style="font-size: 16px; margin-bottom: 3px"
+                  style="color: var(--blue); display: block"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="flex-shrink: 0"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="12" cy="12" r="6" />
+                    <circle cx="12" cy="12" r="2" />
+                  </svg>
+                </div>
+                <div
+                  style="font-size: 10px; font-weight: 700; color: var(--blue)"
+                >
+                  Micro
+                </div>
+                <div style="font-size: 10px; color: var(--muted)">10K+</div>
+              </div>
+            </div>
+            <div
+              style="
+                background: #fff;
+                border-radius: var(--r);
+                padding: 14px;
+                border: 1px solid var(--border);
+                text-align: center;
+              "
+            >
+              <div
+                style="font-size: 11px; color: var(--muted); margin-bottom: 4px"
+              >
+                Combined Audience Reach
+              </div>
+              <div
+                style="
+                  font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                  font-size: 28px;
+                  font-weight: 800;
+                  color: var(--blue);
+                "
+              >
+                50M+
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="lbl">Service 04</span>
+            <h2 class="hd">Influencer <span>Marketing</span></h2>
+            <p
+              style="
+                font-size: 15.5px;
+                color: var(--muted);
+                line-height: 1.75;
+                margin-bottom: 20px;
+              "
+            >
+              Strategic partnerships with the world's top content creators —
+              identification, outreach, briefing, execution, and full
+              attribution handled end-to-end.
+            </p>
+            <div class="feat">Influencer Research &amp; Vetting</div>
+            <div class="feat">Campaign Strategy &amp; Creative Briefing</div>
+            <div class="feat">Contract Negotiation &amp; Management</div>
+            <div class="feat">Instagram, YouTube &amp; Podcast Creators</div>
+            <div class="feat">Performance Tracking &amp; Attribution</div>
+            <div class="feat">UGC Content Strategy &amp; Repurposing</div>
+            <div style="margin-top: 24px">
+              <a href="contact.html" class="btn btn-primary"
+                >Explore Influencer Campaigns →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div id="email" class="svc-row">
+          <div>
+            <span class="lbl">Service 05</span>
+            <h2 class="hd">Email &amp; <span>CRM Automation</span></h2>
+            <p
+              style="
+                font-size: 15.5px;
+                color: var(--muted);
+                line-height: 1.75;
+                margin-bottom: 20px;
+              "
+            >
+              Precision nurture flows and CRM automation that turn qualified
+              leads into loyal, high-value customers — the highest-ROI channel
+              in digital marketing.
+            </p>
+            <div class="feat">Welcome &amp; Onboarding Sequences</div>
+            <div class="feat">Lead Nurture &amp; Drip Campaigns</div>
+            <div class="feat">Cart Abandonment &amp; Re-engagement</div>
+            <div class="feat">CRM Setup &amp; Integration</div>
+            <div class="feat">
+              A/B Testing &amp; Deliverability Optimisation
+            </div>
+            <div class="feat">Lifecycle Marketing Strategy</div>
+            <div style="margin-top: 24px">
+              <a href="contact.html" class="btn btn-primary"
+                >Set Up Email Automation →</a
+              >
+            </div>
+          </div>
+          <div class="svc-vis">
+            <div
+              style="
+                font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                font-size: 12px;
+                font-weight: 700;
+                color: var(--blue);
+                margin-bottom: 14px;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+              "
+            >
+              Email Performance
+            </div>
+            <div
+              style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px"
+            >
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 14px;
+                  border: 1px solid var(--border);
+                  text-align: center;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                    font-size: 22px;
+                    font-weight: 800;
+                    color: var(--blue);
+                  "
+                >
+                  42×
+                </div>
+                <div style="font-size: 11px; color: var(--muted)">Avg. ROI</div>
+              </div>
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 14px;
+                  border: 1px solid var(--border);
+                  text-align: center;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                    font-size: 22px;
+                    font-weight: 800;
+                    color: var(--blue);
+                  "
+                >
+                  28%
+                </div>
+                <div style="font-size: 11px; color: var(--muted)">
+                  Open Rate
+                </div>
+              </div>
+              <div
+                style="
+                  background: var(--blue);
+                  border-radius: var(--r);
+                  padding: 14px;
+                  text-align: center;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                    font-size: 22px;
+                    font-weight: 800;
+                    color: #fff;
+                  "
+                >
+                  4.2%
+                </div>
+                <div style="font-size: 11px; color: rgba(255, 255, 255, 0.7)">
+                  Click Rate
+                </div>
+              </div>
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 14px;
+                  border: 1px solid var(--border);
+                  text-align: center;
+                "
+              >
+                <div
+                  style="
+                    font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                    font-size: 22px;
+                    font-weight: 800;
+                    color: var(--blue);
+                  "
+                >
+                  -62%
+                </div>
+                <div style="font-size: 11px; color: var(--muted)">
+                  Churn Rate
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="content" class="svc-row flip" style="border-bottom: none">
+          <div class="svc-vis">
+            <div
+              style="
+                font-family: &quot;Bricolage Grotesque&quot;, sans-serif;
+                font-size: 12px;
+                font-weight: 700;
+                color: var(--blue);
+                margin-bottom: 14px;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+              "
+            >
+              Content Pipeline
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px">
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 12px 14px;
+                  border: 1px solid var(--border);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <span style="color: var(--blue)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="flex-shrink: 0"
+                  >
+                    <path d="M12 20h9" />
+                    <path
+                      d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"
+                    /></svg
+                ></span>
+                <span style="font-size: 13px; color: var(--mid)"
+                  >Blog &amp; Long-Form Articles</span
+                ><span
+                  style="
+                    margin-left: auto;
+                    font-size: 11px;
+                    background: var(--blue-pale);
+                    color: var(--blue);
+                    padding: 2px 8px;
+                    border-radius: 100px;
+                    font-weight: 600;
+                  "
+                  >Live</span
+                >
+              </div>
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 12px 14px;
+                  border: 1px solid var(--border);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <span style="color: var(--blue)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="flex-shrink: 0"
+                  >
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                    <line x1="12" y1="18" x2="12.01" y2="18" /></svg
+                ></span>
+                <span style="font-size: 13px; color: var(--mid)"
+                  >Video Scripts &amp; Storyboards</span
+                ><span
+                  style="
+                    margin-left: auto;
+                    font-size: 11px;
+                    background: var(--blue-pale);
+                    color: var(--blue);
+                    padding: 2px 8px;
+                    border-radius: 100px;
+                    font-weight: 600;
+                  "
+                  >Live</span
+                >
+              </div>
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 12px 14px;
+                  border: 1px solid var(--border);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <span style="color: var(--blue)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="flex-shrink: 0"
+                  >
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg
+                ></span>
+                <span style="font-size: 13px; color: var(--mid)"
+                  >Infographics &amp; Case Studies</span
+                ><span
+                  style="
+                    margin-left: auto;
+                    font-size: 11px;
+                    background: #fef9c3;
+                    color: #854d0e;
+                    padding: 2px 8px;
+                    border-radius: 100px;
+                    font-weight: 600;
+                  "
+                  >In Review</span
+                >
+              </div>
+              <div
+                style="
+                  background: #fff;
+                  border-radius: var(--r);
+                  padding: 12px 14px;
+                  border: 1px solid var(--border);
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                "
+              >
+                <span style="color: var(--blue)"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="flex-shrink: 0"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    />
+                    <polyline points="22,6 12,13 2,6" /></svg
+                ></span>
+                <span style="font-size: 13px; color: var(--mid)"
+                  >Email Newsletters</span
+                ><span
+                  style="
+                    margin-left: auto;
+                    font-size: 11px;
+                    background: #dcfce7;
+                    color: #166534;
+                    padding: 2px 8px;
+                    border-radius: 100px;
+                    font-weight: 600;
+                  "
+                  >Published</span
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="lbl">Service 06</span>
+            <h2 class="hd">Content &amp; <span>Brand Strategy</span></h2>
+            <p
+              style="
+                font-size: 15.5px;
+                color: var(--muted);
+                line-height: 1.75;
+                margin-bottom: 20px;
+              "
+            >
+              Purpose-built content strategy and brand storytelling that
+              resonates with global audiences — building authority, trust, and
+              preference at every stage of the buyer journey.
+            </p>
+            <div class="feat">Brand Positioning &amp; Messaging</div>
+            <div class="feat">Content Strategy &amp; Editorial Calendar</div>
+            <div class="feat">Blog, Video &amp; Podcast Production</div>
+            <div class="feat">Thought Leadership Campaigns</div>
+            <div class="feat">Vernacular &amp; Regional Content</div>
+            <div class="feat">PR &amp; Media Relations</div>
+            <div style="margin-top: 24px">
+              <a href="contact.html" class="btn btn-primary"
+                >Build Your Content Strategy →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="sec sec-alt">
-        <div class="wrap">
-            <div style="text-align:center;margin-bottom:44px;">
-                <span class="lbl">Our Process</span>
-                <h2 class="hd">How Every <span>Engagement Works</span></h2>
-            </div>
-            <div class="proc-g">
-                <div class="proc">
-                    <div class="proc-n">01</div>
-                    <h5>Discovery &amp; Audit</h5>
-                    <p>Deep dive into your business, current digital presence, competition, and market opportunity.</p>
-                </div>
-                <div class="proc">
-                    <div class="proc-n">02</div>
-                    <h5>Strategy &amp; Planning</h5>
-                    <p>Custom 90-day roadmap — KPIs, channel mix, budget allocation, and creative direction.</p>
-                </div>
-                <div class="proc">
-                    <div class="proc-n">03</div>
-                    <h5>Launch &amp; Execute</h5>
-                    <p>Full-service execution: creative, targeting, bidding, tech setup, and live monitoring.</p>
-                </div>
-                <div class="proc">
-                    <div class="proc-n">04</div>
-                    <h5>Optimise &amp; Scale</h5>
-                    <p>Weekly reviews, A/B testing, and budget reallocation to maximise every campaign.</p>
-                </div>
-            </div>
-            <div style="text-align:center;margin-top:36px;"><a href="contact.html" class="btn btn-primary">Start Your Campaign →</a></div>
+      <div class="wrap">
+        <div style="text-align: center; margin-bottom: 44px">
+          <span class="lbl">Our Process</span>
+          <h2 class="hd">How Every <span>Engagement Works</span></h2>
         </div>
+        <div class="proc-g">
+          <div class="proc">
+            <div class="proc-n">01</div>
+            <h5>Discovery &amp; Audit</h5>
+            <p>
+              Deep dive into your business, current digital presence,
+              competition, and market opportunity.
+            </p>
+          </div>
+          <div class="proc">
+            <div class="proc-n">02</div>
+            <h5>Strategy &amp; Planning</h5>
+            <p>
+              Custom 90-day roadmap — KPIs, channel mix, budget allocation, and
+              creative direction.
+            </p>
+          </div>
+          <div class="proc">
+            <div class="proc-n">03</div>
+            <h5>Launch &amp; Execute</h5>
+            <p>
+              Full-service execution: creative, targeting, bidding, tech setup,
+              and live monitoring.
+            </p>
+          </div>
+          <div class="proc">
+            <div class="proc-n">04</div>
+            <h5>Optimise &amp; Scale</h5>
+            <p>
+              Weekly reviews, A/B testing, and budget reallocation to maximise
+              every campaign.
+            </p>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 36px">
+          <a href="contact.html" class="btn btn-primary"
+            >Start Your Campaign →</a
+          >
+        </div>
+      </div>
     </section>
 
     <footer>
-        <div class="ft-main">
-            <div class="ft-grid">
-                <div class="ft-brand">
-                    <a href="index.html" style="display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0;">
-                        <svg width="48" height="38" viewBox="0 0 60 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Rocmob logo mark">
-  <!-- R: vertical stem + bowl + diagonal leg -->
-  <rect x="2" y="4" width="6" height="36" fill="#ffffff"/>
-  <path d="M8 4 H22 C27 4 31 8 31 14 C31 19 28 23 23 24 L31 40 H24 L17 25 H8 V40 H2 V4Z M8 10 V20 H21 C24 20 25 18 25 14 C25 11 23 10 21 10Z" fill="#ffffff"/>
-  <!-- diagonal leg of R cuts across -->
-  <polygon points="17,25 24,25 32,40 25,40" fill="#ffffff"/>
-  <!-- M: two peaks -->
-  <polygon points="34,4 34,40 40,40 40,16 47,28 54,16 54,40 60,40 60,4 54,4 47,18 40,4" fill="#ffffff"/>
-</svg>
-                        <div style="display:flex;flex-direction:column;line-height:1;">
-                            <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:17px;font-weight:700;color:#ffffff;letter-spacing:0.08em;">ROCMOB</span>
-                            <span style="font-size:9.5px;font-weight:500;color:rgba(255,255,255,0.55);letter-spacing:0.09em;text-transform:uppercase;margin-top:2px;">Performance Limited · India</span>
-                        </div>
-                    </a>
-                    <p>India's performance-first digital marketing agency — backed by global Rocmob Group expertise. Rooted in Kolkata, serving brands across India.</p>
-                    <p style="margin-top:12px;font-size:12.5px;color:rgba(255,255,255,0.35);">CSL 0513 Ecocentre, EM Block<br>Sector V, Bidhannagar, Kolkata 700091</p>
-                </div>
-                <div class="ft-col">
-                    <h5>Services</h5>
-                    <ul>
-                        <li><a href="services.html#perf">Performance Marketing</a></li>
-                        <li><a href="services.html#seo">SEO &amp; SEM</a></li>
-                        <li><a href="services.html#social">Social Media</a></li>
-                        <li><a href="services.html#influencer">Influencer Marketing</a></li>
-                        <li><a href="services.html#email">Email &amp; CRM</a></li>
-                        <li><a href="services.html#content">Content Strategy</a></li>
-                    </ul>
-                </div>
-                <div class="ft-col">
-                    <h5>Company</h5>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="about.html#values">Our Values</a></li>
-                        <li><a href="industries.html">Industries</a></li>
-                        <li><a href="blog.html">Insights</a></li>
-                        <li><a href="contact.html">Careers</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="ft-col">
-                    <h5>Industries</h5>
-                    <ul>
-                        <li><a href="industries.html">E-Commerce</a></li>
-                        <li><a href="industries.html">Real Estate</a></li>
-                        <li><a href="industries.html">EdTech</a></li>
-                        <li><a href="industries.html">Healthcare</a></li>
-                        <li><a href="industries.html">BFSI &amp; Fintech</a></li>
-                        <li><a href="industries.html">SaaS &amp; Tech</a></li>
-                    </ul>
-                </div>
-                <div class="ft-col">
-                    <h5>Contact</h5>
-                    <ul>
-                        <li><a href="mailto:sales@rocmob.com">sales@rocmob.com</a></li>
-                        <li><a href="tel:03346049461">03346049461</a></li>
-                        <li><span style="color:rgba(255,255,255,0.35)">Mon–Fri 9:30 AM–6:30 PM</span></li>
-                        <li><span style="color:rgba(255,255,255,0.35)">Sat 10:00 AM–3:00 PM IST</span></li>
-                    </ul>
-                    <div style="margin-top:20px;"><a href="contact.html" class="btn btn-primary btn-sm">Free Audit →</a></div>
-                </div>
+      <div class="ft-main">
+        <div class="ft-grid">
+          <div class="ft-brand">
+            <a
+              href="index.html"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 11px;
+                text-decoration: none;
+                flex-shrink: 0;
+              "
+            >
+              <img src="rocmob logo.png" alt="Rocmob Logo" class="nav-logo" />
+            </a>
+            <p>
+              A global performance-first digital marketing agency — backed by
+              the Rocmob Group. Rooted in Kolkata, serving brands worldwide.
+            </p>
+            <p
+              style="
+                margin-top: 12px;
+                font-size: 12.5px;
+                color: rgba(255, 255, 255, 0.35);
+              "
+            >
+              CSL 0513 Ecocentre, EM Block<br />Sector V, Bidhannagar, Kolkata
+              700091
+            </p>
+          </div>
+          <div class="ft-col">
+            <h5>Services</h5>
+            <ul>
+              <li><a href="services.html#perf">Performance Marketing</a></li>
+              <li><a href="services.html#seo">SEO &amp; SEM</a></li>
+              <li><a href="services.html#social">Social Media</a></li>
+              <li>
+                <a href="services.html#influencer">Influencer Marketing</a>
+              </li>
+              <li><a href="services.html#email">Email &amp; CRM</a></li>
+              <li><a href="services.html#content">Content Strategy</a></li>
+            </ul>
+          </div>
+          <div class="ft-col">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="about.html#values">Our Values</a></li>
+              <li><a href="industries.html">Industries</a></li>
+              <li><a href="blog.html">Insights</a></li>
+              <li><a href="contact.html">Careers</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="ft-col">
+            <h5>Industries</h5>
+            <ul>
+              <li><a href="industries.html">E-Commerce</a></li>
+              <li><a href="industries.html">Real Estate</a></li>
+              <li><a href="industries.html">EdTech</a></li>
+              <li><a href="industries.html">Healthcare</a></li>
+              <li><a href="industries.html">BFSI &amp; Fintech</a></li>
+              <li><a href="industries.html">SaaS &amp; Tech</a></li>
+            </ul>
+          </div>
+          <div class="ft-col">
+            <h5>Contact</h5>
+            <ul>
+              <li><a href="mailto:sales@rocmob.com">sales@rocmob.com</a></li>
+              <li><a href="tel:03346049461">03346049461</a></li>
+              <li>
+                <span style="color: rgba(255, 255, 255, 0.35)"
+                  >Mon–Fri 9:30 AM–6:30 PM</span
+                >
+              </li>
+              <li>
+                <span style="color: rgba(255, 255, 255, 0.35)"
+                  >Sat 10:00 AM–3:00 PM IST</span
+                >
+              </li>
+            </ul>
+            <div style="margin-top: 20px">
+              <a href="contact.html" class="btn btn-primary btn-sm"
+                >Free Audit →</a
+              >
             </div>
+          </div>
         </div>
-        <div class="ft-bot">
-            <p>© 2025 Rocmob Performance Limited. All rights reserved. Part of the Rocmob Group.</p>
-            <div class="soc"><a href="#">in</a><a href="#">Ig</a><a href="#">𝕏</a><a href="#">YT</a></div>
+      </div>
+      <div class="ft-bot">
+        <p>
+          © 2025 Rocmob Performance Limited. All rights reserved. Part of the
+          Rocmob Group.
+        </p>
+        <div class="soc">
+          <!-- Facebook -->
+          <a href="#" aria-label="Facebook" class="social-icon facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+              />
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="#" aria-label="LinkedIn" class="social-icon linkedin">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M6.94 6.5A2.44 2.44 0 114.5 4.06a2.44 2.44 0 012.44 2.44zM4.75 8.75h4.38V20H4.75zM9.75 8.75h4.2v1.54h.06c.59-1.12 2.03-2.3 4.18-2.3 4.47 0 5.29 2.94 5.29 6.76V20h-4.38v-5.06c0-1.21-.02-2.76-1.68-2.76-1.68 0-1.94 1.31-1.94 2.67V20H9.75z"
+              />
+            </svg>
+          </a>
+
+          <!-- YouTube -->
+          <a href="#" aria-label="YouTube" class="social-icon youtube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23 7s-.2-1.43-.82-2.06c-.78-.83-1.66-.83-2.06-.88C17.2 3.9 12 3.9 12 3.9h-.01s-5.2 0-8.12.16c-.4.05-1.28.05-2.06.88C1.2 5.57 1 7 1 7S.8 8.68.8 10.36v1.27C.8 13.32 1 15 1 15s.2 1.43.82 2.06c.78.83 1.8.8 2.26.89C6.8 18.1 12 18.1 12 18.1s5.2 0 8.12-.16c.4-.05 1.28-.05 2.06-.88.62-.63.82-2.06.82-2.06s.2-1.68.2-3.36v-1.27C23.2 8.68 23 7 23 7zM9.75 14.57V8.43l5.4 3.07-5.4 3.07z"
+              />
+            </svg>
+          </a>
+
+          <!-- Twitter -->
+          <a href="#" aria-label="Twitter" class="social-icon twitter">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.29 3.9A12.14 12.14 0 013 4.79a4.28 4.28 0 001.32 5.72 4.22 4.22 0 01-1.94-.54v.05a4.29 4.29 0 003.43 4.2 4.29 4.29 0 01-1.93.07 4.29 4.29 0 004 2.98A8.6 8.6 0 012 19.54 12.13 12.13 0 008.56 21c7.87 0 12.17-6.52 12.17-12.17 0-.18 0-.36-.01-.53A8.7 8.7 0 0024 5.1a8.48 8.48 0 01-2.54.7z"
+              />
+            </svg>
+          </a>
         </div>
+      </div>
     </footer>
     <script>
+      (function () {
+        var dds = document.querySelectorAll(".has-dd");
+        dds.forEach(function (el) {
+          var link = el.querySelector(":scope > a");
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            var isOpen = el.classList.contains("open");
+            dds.forEach(function (d) {
+              d.classList.remove("open");
+            });
+            if (!isOpen) el.classList.add("open");
+          });
+        });
+        document.addEventListener("click", function (e) {
+          if (!e.target.closest(".has-dd"))
+            dds.forEach(function (d) {
+              d.classList.remove("open");
+            });
+        });
+      })();
+    </script>
+      <script>
+        // Mobile nav
         (function() {
-            var dds = document.querySelectorAll('.has-dd');
-            dds.forEach(function(el) {
-                var link = el.querySelector(':scope > a');
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var isOpen = el.classList.contains('open');
-                    dds.forEach(function(d) {
-                        d.classList.remove('open');
-                    });
-                    if (!isOpen) el.classList.add('open');
+            var burger = document.getElementById('navBurger');
+            var mobNav = document.getElementById('mobNav');
+            var mobClose = document.getElementById('mobClose');
+            var mobBackdrop = document.getElementById('mobBackdrop');
+            var mobSvcToggle = document.getElementById('mobSvcToggle');
+            var mobSvcSub = document.getElementById('mobSvcSub');
+            var mobSvcChevron = document.getElementById('mobSvcChevron');
+
+            function openNav() {
+                mobNav.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                burger.classList.add('open');
+            }
+            function closeNav() {
+                mobNav.classList.remove('open');
+                document.body.style.overflow = '';
+                burger.classList.remove('open');
+            }
+            if (burger) burger.addEventListener('click', openNav);
+            if (mobClose) mobClose.addEventListener('click', closeNav);
+            if (mobBackdrop) mobBackdrop.addEventListener('click', closeNav);
+            if (mobSvcToggle) {
+                mobSvcToggle.addEventListener('click', function() {
+                    mobSvcSub.classList.toggle('open');
+                    mobSvcChevron.classList.toggle('open');
                 });
-            });
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.has-dd')) dds.forEach(function(d) {
-                    d.classList.remove('open');
-                });
-            });
+            }
         })();
+
     </script>
 </body>
-
 </html>
